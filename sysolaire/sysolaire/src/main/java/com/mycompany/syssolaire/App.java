@@ -104,22 +104,33 @@ public class App extends Application {
         
         //Creation representation Mercure
         Circle rMercure = new Circle();
+        /**
         rMercure.setRadius(mercure.getRayon());
         rMercure.setFill(mercure.getCouleur());
+        **/
         //Creation de son label
         Label tMercure = new Label("Mercure");
+        /**
         tMercure.setLayoutX(5);
         tMercure.setLayoutY(30);
         tMercure.setFont(Font.font("Calibri", 15.));
         tMercure.setTextFill(mercure.getCouleur());
-
+        **/
 
         URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.png");
+        /**
         URLConnection connMercure = urlMercure.openConnection();
         InputStream isMercure = connMercure.getInputStream();
         Image iMercure = new Image(isMercure);
         rMercure.setFill(new ImagePattern(iMercure));
+        **/
 
+        rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30);
+        
+        repMercure.affichagePlanete();
+        repMercure.affichageTexte();
+        repMercure.affichageTexture();
+        
         
         //Animation
         PathTransition transitionMercure = new PathTransition();
