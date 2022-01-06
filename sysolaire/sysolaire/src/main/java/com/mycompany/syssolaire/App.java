@@ -171,23 +171,35 @@ public class App extends Application {
         
         //Creation representation Venus
         Circle rVenus = new Circle();
+        /*
         rVenus.setRadius(venus.getRayon());
         rVenus.setFill(venus.getCouleur());
+        */
         //Creation de son label
         Label tVenus = new Label("Venus");
+        /*
         tVenus.setLayoutX(5);
         tVenus.setLayoutY(55);
         tVenus.setFont(Font.font("Calibri", 15.));
         tVenus.setTextFill(venus.getCouleur());
+        */
 
 
         URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.png");
+        /*
         URLConnection connVenus = urlVenus.openConnection();
         InputStream isVenus = connVenus.getInputStream();
         Image iVenus = new Image(isVenus);
         rVenus.setFill(new ImagePattern(iVenus));
+        */
 
-       
+        rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55);
+        
+        repVenus.affichagePlanete();
+        repVenus.affichageTexte();
+        repVenus.affichageTexture();
+
+
         //Animations
         PathTransition transitionVenus = new PathTransition();
         transitionVenus.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*venus.getPrevolution()*3600*24));
@@ -234,13 +246,16 @@ public class App extends Application {
         
         //Creation representation Terre
         Circle rTerre = new Circle();
+        /*¨
         //Definition du rayon
         rTerre.setRadius(terre.getRayon());
         //Modification de la couleur de la représentation
         //On la récupère directement sur l'objet Astre terre
         rTerre.setFill(terre.getCouleur());
+        */
         //Creation de son label
         Label tTerre = new Label("Terre");
+        /*
         //Positionnement du label
         tTerre.setLayoutX(5);
         tTerre.setLayoutY(80);
@@ -248,13 +263,24 @@ public class App extends Application {
         tTerre.setFont(Font.font("Calibri", 15.));
         //Coloration du texte de la même couleur que la représentation
         tTerre.setTextFill(terre.getCouleur());
+        */
        
         URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.png");
+        /*
         URLConnection connTerre = urlTerre.openConnection();
         InputStream isTerre = connTerre.getInputStream();
         Image iTerre = new Image(isTerre);
         rTerre.setFill(new ImagePattern(iTerre));
+        */
+
+        rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80);
         
+        repTerre.affichagePlanete();
+        repTerre.affichageTexte();
+        repTerre.affichageTexture();
+
+
+
         //Animations
         //Nous avons décidé d'utiliser des animations directement implantées dans javaFX
         //Creation d'un chemin pour l'animation
@@ -302,21 +328,35 @@ public class App extends Application {
         
         //Creation representation Venus
         Circle rMars = new Circle();
+        /*
         rMars.setRadius(mars.getRayon());
         rMars.setFill(mars.getCouleur());
+        */
         //Creation de son label
         Label tMars = new Label("Mars");
+        /*
         tMars.setLayoutX(5);
         tMars.setLayoutY(105);
         tMars.setFont(Font.font("Calibri", 15.));
         tMars.setTextFill(mars.getCouleur());
+        */
 
         URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.png");
+        /*
         URLConnection connMars = urlMars.openConnection();
         InputStream isMars = connMars.getInputStream();
         Image iMars = new Image(isMars);
         rMars.setFill(new ImagePattern(iMars));
+        */
         
+
+        rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105);
+        
+        repMars.affichagePlanete();
+        repMars.affichageTexte();
+        repMars.affichageTexture();
+
+
         //Animations
         PathTransition transitionMars = new PathTransition();
         transitionMars.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*mars.getPrevolution()*3600*24));
@@ -356,20 +396,32 @@ public class App extends Application {
         
         //Creation representation Jupiter
         Circle rJupiter = new Circle();
+        /*
         rJupiter.setRadius(jupiter.getRayon());
         rJupiter.setFill(jupiter.getCouleur());
+        */
         //Creation de son label
         Label tJupiter = new Label("Jupiter");
+        /*
         tJupiter.setLayoutX(5);
         tJupiter.setLayoutY(130);
         tJupiter.setFont(Font.font("Calibri", 15.));
         tJupiter.setTextFill(jupiter.getCouleur());
+        */
 
         URL urlJupiter = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.png");
+        /*
         URLConnection connJupiter = urlJupiter.openConnection();
         InputStream isJupiter = connJupiter.getInputStream();
         Image iJupiter = new Image(isJupiter);
         rJupiter.setFill(new ImagePattern(iJupiter));
+        */
+
+        rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130);
+        
+        repJupiter.affichagePlanete();
+        repJupiter.affichageTexte();
+        repJupiter.affichageTexture();
         
         //Animation Jupiter
         PathTransition transitionJupiter = new PathTransition();
@@ -406,20 +458,32 @@ public class App extends Application {
         
         //Creation representation Mercure
         Circle rSaturne = new Circle();
+        /*
         rSaturne.setRadius(saturne.getRayon());
         rSaturne.setFill(saturne.getCouleur());
+        */
         //Creation de son label
         Label tSaturne = new Label("Saturne");
+        /*
         tSaturne.setLayoutX(5);
         tSaturne.setLayoutY(155);
         tSaturne.setFont(Font.font("Calibri", 15.));
         tSaturne.setTextFill(saturne.getCouleur());
+        */
 
         URL urlSaturne = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.png");
+        /*
         URLConnection connSaturne = urlSaturne.openConnection();
         InputStream isSaturne = connSaturne.getInputStream();
         Image iSaturne = new Image(isSaturne);
         rSaturne.setFill(new ImagePattern(iSaturne));
+        */
+
+        rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155);
+        
+        repSaturne.affichagePlanete();
+        repSaturne.affichageTexte();
+        repSaturne.affichageTexture();
         
         //Animation Saturne
         PathTransition transitionSaturne = new PathTransition();
@@ -455,20 +519,31 @@ public class App extends Application {
         
         //Creation representation Mercure
         Circle rUranus = new Circle();
+        /*
         rUranus.setRadius(uranus.getRayon());
         rUranus.setFill(uranus.getCouleur());
+        */
         //Creation de son label
         Label tUranus = new Label("Uranus");
-        tUranus.setLayoutX(5);
+        /*tUranus.setLayoutX(5);
         tUranus.setLayoutY(180);
         tUranus.setFont(Font.font("Calibri", 15.));
         tUranus.setTextFill(uranus.getCouleur());
+        */
 
         URL urlUranus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.png");
+        /*
         URLConnection connUranus = urlUranus.openConnection();
         InputStream isUranus = connUranus.getInputStream();
         Image iUranus = new Image(isUranus);
         rUranus.setFill(new ImagePattern(iUranus));
+        */
+
+        rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180);
+        
+        repUranus.affichagePlanete();
+        repUranus.affichageTexte();
+        repUranus.affichageTexture();
         
         //Animation Uranus
         PathTransition transitionUranus = new PathTransition();
@@ -505,21 +580,34 @@ public class App extends Application {
         
         //Creation representation Mercure
         Circle rNeptune = new Circle();
+        /*
         rNeptune.setRadius(neptune.getRayon());
         rNeptune.setFill(neptune.getCouleur());
+        */
         //Creation de son label
         Label tNeptune = new Label("Neptune");
+        /*
         tNeptune.setLayoutX(5);
         tNeptune.setLayoutY(205);
         tNeptune.setFont(Font.font("Calibri", 15.));
         tNeptune.setTextFill(neptune.getCouleur());
+        */
 
         URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.png");
-        URLConnection connNeptune = urlNeptune.openConnection();
+        /*URLConnection connNeptune = urlNeptune.openConnection();
         InputStream isNeptune = connNeptune.getInputStream();
         Image iNeptune = new Image(isNeptune);
         rNeptune.setFill(new ImagePattern(iNeptune));
+        */
         
+
+        rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205);
+        
+        repNeptune.affichagePlanete();
+        repNeptune.affichageTexte();
+        repNeptune.affichageTexture();
+
+
         //Animation Neptune
         PathTransition transitionNeptune = new PathTransition();
         transitionNeptune.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*neptune.getPrevolution()*3600*24));
