@@ -5,25 +5,25 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
+import javafx.animation.Interpolator;
+import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import javafx.animation.Interpolator;
-import javafx.animation.PathTransition;
-import javafx.scene.control.CheckBox;
 import javafx.util.Duration;
-import javafx.scene.control.Slider;
-import javafx.scene.image.Image;
-import javafx.scene.paint.ImagePattern;
 
 /**
  * JavaFX App
