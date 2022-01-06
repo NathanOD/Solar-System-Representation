@@ -86,6 +86,7 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eMercure = new Ellipse();
+        /**
         //Coordonnées centre
         eMercure.setCenterX(oMercure.getPcentrex());
         eMercure.setCenterY(oMercure.getPcentrey());
@@ -96,6 +97,10 @@ public class App extends Application {
         eMercure.setStroke(Color.rgb(228, 225, 220));
         eMercure.setStrokeWidth(1);
         eMercure.setFill(Color.rgb(1, 0, 41));
+        **/
+        
+        rOrbite orbMercure = new rOrbite(eMercure, oMercure);
+        orbMercure.affichage();
         
         //Creation representation Mercure
         Circle rMercure = new Circle();
@@ -136,6 +141,11 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eVenus = new Ellipse();
+        
+        rOrbite orbVenus = new rOrbite(eVenus, oVenus);
+        orbVenus.affichage();
+        
+        /**
         //Coordonnées centre
         eVenus.setCenterX(oVenus.getPcentrex());
         eVenus.setCenterY(oVenus.getPcentrey());
@@ -146,6 +156,7 @@ public class App extends Application {
         eVenus.setStroke(Color.rgb(228, 225, 220));
         eVenus.setStrokeWidth(1);
         eVenus.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Venus
         Circle rVenus = new Circle();
@@ -187,6 +198,9 @@ public class App extends Application {
         //Creation representation orbite (une ellipse)
         Ellipse eTerre = new Ellipse();
         
+        rOrbite orbTerre = new rOrbite(eTerre, oTerre);
+        orbTerre.affichage();
+        /**
         //Coordonnées centre de l'ellipse
         //Definition de la position selon les abscisses
         eTerre.setCenterX(oTerre.getPcentrex());
@@ -205,7 +219,7 @@ public class App extends Application {
         //Modification de la couleur de l'ellipse
         //Nous avons utilisé la même couleur que celle de la scène
         eTerre.setFill(Color.rgb(1, 0, 41));
-        
+        **/
         
         //Creation representation Terre
         Circle rTerre = new Circle();
@@ -256,8 +270,13 @@ public class App extends Application {
         Astre mars = new Astre (5, Color.rgb(217, 72, 8), 686.885);
         Orbite oMars = new Orbite (740, 390, 256, 135, venus);
         
+        
         //Creation representation orbite
         Ellipse eMars = new Ellipse();
+        
+        rOrbite orbMars = new rOrbite(eMars, oMars);
+        orbMars.affichage();
+        /**
         //Coordonnées centre
         eMars.setCenterX(oMars.getPcentrex());
         eMars.setCenterY(oMars.getPcentrey());
@@ -268,6 +287,7 @@ public class App extends Application {
         eMars.setStroke(Color.rgb(228, 225, 220));
         eMars.setStrokeWidth(1);
         eMars.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Venus
         Circle rMars = new Circle();
@@ -306,6 +326,11 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eJupiter = new Ellipse();
+        
+        rOrbite orbJupiter = new rOrbite(eJupiter, oJupiter);
+        orbJupiter.affichage();
+        
+        /**
         //Coordonnées centre
         eJupiter.setCenterX(oJupiter.getPcentrex());
         eJupiter.setCenterY(oJupiter.getPcentrey());
@@ -316,6 +341,7 @@ public class App extends Application {
         eJupiter.setStroke(Color.rgb(228, 225, 220));
         eJupiter.setStrokeWidth(1);
         eJupiter.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Jupiter
         Circle rJupiter = new Circle();
@@ -351,6 +377,10 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eSaturne = new Ellipse();
+        
+        rOrbite orbSaturne = new rOrbite(eSaturne, oSaturne);
+        orbSaturne.affichage();
+        /**
         //Coordonnées centre
         eSaturne.setCenterX(oSaturne.getPcentrex());
         eSaturne.setCenterY(oSaturne.getPcentrey());
@@ -361,6 +391,7 @@ public class App extends Application {
         eSaturne.setStroke(Color.rgb(228, 225, 220));
         eSaturne.setStrokeWidth(1);
         eSaturne.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Mercure
         Circle rSaturne = new Circle();
@@ -395,6 +426,10 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eUranus = new Ellipse();
+        
+        rOrbite orbUranus = new rOrbite(eUranus, oUranus);
+        orbUranus.affichage();
+        /**
         //Coordonnées centre
         eUranus.setCenterX(oUranus.getPcentrex());
         eUranus.setCenterY(oUranus.getPcentrey());
@@ -405,6 +440,7 @@ public class App extends Application {
         eUranus.setStroke(Color.rgb(228, 225, 220));
         eUranus.setStrokeWidth(1);
         eUranus.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Mercure
         Circle rUranus = new Circle();
@@ -440,6 +476,10 @@ public class App extends Application {
         
         //Creation representation orbite
         Ellipse eNeptune = new Ellipse();
+        
+        rOrbite orbNeptune = new rOrbite(eNeptune, oNeptune);
+        orbNeptune.affichage();
+        /**
         //Coordonnées centre
         eNeptune.setCenterX(oNeptune.getPcentrex());
         eNeptune.setCenterY(oNeptune.getPcentrey());
@@ -450,6 +490,7 @@ public class App extends Application {
         eNeptune.setStroke(Color.rgb(228, 225, 220));
         eNeptune.setStrokeWidth(1);
         eNeptune.setFill(Color.rgb(1, 0, 41));
+        **/
         
         //Creation representation Mercure
         Circle rNeptune = new Circle();
