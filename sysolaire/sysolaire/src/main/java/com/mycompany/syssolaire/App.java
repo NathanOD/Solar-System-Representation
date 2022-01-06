@@ -71,7 +71,7 @@ public class App extends Application {
         
 
         
-        URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Soleil.png");
+        URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.png");
         URLConnection connSoleil = urlSoleil.openConnection();
         InputStream isSoleil = connSoleil.getInputStream();
         Image iSoleil = new Image(isSoleil);
@@ -109,7 +109,7 @@ public class App extends Application {
         tMercure.setTextFill(mercure.getCouleur());
 
 
-        URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Mercure.png");
+        URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.png");
         URLConnection connMercure = urlMercure.openConnection();
         InputStream isMercure = connMercure.getInputStream();
         Image iMercure = new Image(isMercure);
@@ -159,7 +159,7 @@ public class App extends Application {
         tVenus.setTextFill(venus.getCouleur());
 
 
-        URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Venus.png");
+        URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.png");
         URLConnection connVenus = urlVenus.openConnection();
         InputStream isVenus = connVenus.getInputStream();
         Image iVenus = new Image(isVenus);
@@ -224,7 +224,7 @@ public class App extends Application {
         //Coloration du texte de la même couleur que la représentation
         tTerre.setTextFill(terre.getCouleur());
        
-        URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Terre.png");
+        URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.png");
         URLConnection connTerre = urlTerre.openConnection();
         InputStream isTerre = connTerre.getInputStream();
         Image iTerre = new Image(isTerre);
@@ -280,7 +280,7 @@ public class App extends Application {
         tMars.setFont(Font.font("Calibri", 15.));
         tMars.setTextFill(mars.getCouleur());
 
-        URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Mars.png");
+        URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.png");
         URLConnection connMars = urlMars.openConnection();
         InputStream isMars = connMars.getInputStream();
         Image iMars = new Image(isMars);
@@ -328,7 +328,7 @@ public class App extends Application {
         tJupiter.setFont(Font.font("Calibri", 15.));
         tJupiter.setTextFill(jupiter.getCouleur());
 
-        URL urlJupiter = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Jupiter.png");
+        URL urlJupiter = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.png");
         URLConnection connJupiter = urlJupiter.openConnection();
         InputStream isJupiter = connJupiter.getInputStream();
         Image iJupiter = new Image(isJupiter);
@@ -373,7 +373,7 @@ public class App extends Application {
         tSaturne.setFont(Font.font("Calibri", 15.));
         tSaturne.setTextFill(saturne.getCouleur());
 
-        URL urlSaturne = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Saturne.png");
+        URL urlSaturne = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.png");
         URLConnection connSaturne = urlSaturne.openConnection();
         InputStream isSaturne = connSaturne.getInputStream();
         Image iSaturne = new Image(isSaturne);
@@ -417,7 +417,7 @@ public class App extends Application {
         tUranus.setFont(Font.font("Calibri", 15.));
         tUranus.setTextFill(uranus.getCouleur());
 
-        URL urlUranus = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Uranus.png");
+        URL urlUranus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.png");
         URLConnection connUranus = urlUranus.openConnection();
         InputStream isUranus = connUranus.getInputStream();
         Image iUranus = new Image(isUranus);
@@ -462,7 +462,7 @@ public class App extends Application {
         tNeptune.setFont(Font.font("Calibri", 15.));
         tNeptune.setTextFill(neptune.getCouleur());
 
-        URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/syssolaire/master/syssolaire/Neptune.png");
+        URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.png");
         URLConnection connNeptune = urlNeptune.openConnection();
         InputStream isNeptune = connNeptune.getInputStream();
         Image iNeptune = new Image(isNeptune);
