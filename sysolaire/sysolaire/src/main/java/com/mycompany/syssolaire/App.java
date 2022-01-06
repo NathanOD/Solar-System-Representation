@@ -271,6 +271,7 @@ public class App extends Application {
 
 
         //Animation Neptune
+        //Test
         PathTransition transitionNeptune = new PathTransition();
         Animation animNeptune = new Animation(transitionNeptune, neptune, rNeptune, eNeptune);
         animNeptune.affAnim();
