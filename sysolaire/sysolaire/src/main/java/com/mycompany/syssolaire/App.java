@@ -1,11 +1,8 @@
 package com.mycompany.syssolaire;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.net.URLConnection;
 
-import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
@@ -16,9 +13,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.text.Font;
@@ -85,18 +80,10 @@ public class App extends Application {
         repMercure.affichageTexte();
         repMercure.affichageTexture();
         
-        
         //Animation
         PathTransition transitionMercure = new PathTransition();
-        transitionMercure.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*mercure.getPrevolution()*3600*24));
-        transitionMercure.setNode(rMercure);
-        transitionMercure.setPath(eMercure);
-        transitionMercure.setCycleCount(PathTransition.INDEFINITE);
-        transitionMercure.setInterpolator(Interpolator.LINEAR);
-        transitionMercure.play();
-
-        
-        
+        Animation animMercure = new Animation(transitionMercure, mercure, rMercure, eMercure);
+        animMercure.affAnim();
         
         
         
@@ -124,14 +111,8 @@ public class App extends Application {
 
         //Animations
         PathTransition transitionVenus = new PathTransition();
-        transitionVenus.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*venus.getPrevolution()*3600*24));
-        transitionVenus.setNode(rVenus);
-        transitionVenus.setPath(eVenus);
-        transitionVenus.setCycleCount(PathTransition.INDEFINITE);
-        transitionVenus.setInterpolator(Interpolator.LINEAR);
-        transitionVenus.play();
-
-
+        Animation animVenus = new Animation(transitionVenus, venus, rVenus, eVenus);
+        animVenus.affAnim();
         
         //Creation Terre
         //Utilisation de la color.rgb qui donne une couleur à partir de la reference rgb
@@ -162,21 +143,8 @@ public class App extends Application {
         //Nous avons décidé d'utiliser des animations directement implantées dans javaFX
         //Creation d'un chemin pour l'animation
         PathTransition transitionTerre = new PathTransition();
-        //Definition de la durée de cette animation (durée d'une rotation complète)
-        //La durée est ajustée par un coefficient (choisi arbitrairement) s'appliquant sur la periode de révolution ramenée en secondes
-        transitionTerre.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*terre.getPrevolution()*3600*24));
-        //Definition de ce qui va etre animé
-        transitionTerre.setNode(rTerre);
-        //Definition du chemin suivi
-        transitionTerre.setPath(eTerre);
-        //Gestion de l'infinité de l'animation
-        transitionTerre.setCycleCount(PathTransition.INDEFINITE);
-        //Obligation d'avoir une vitesse linéaire sur toute l'animation
-        transitionTerre.setInterpolator(Interpolator.LINEAR);
-        //Lancement de l'animation
-        transitionTerre.play();
-        
-        
+        Animation animTerre = new Animation(transitionTerre, terre, rTerre, eTerre);
+        animTerre.affAnim();
         
         
         
@@ -204,15 +172,8 @@ public class App extends Application {
 
         //Animations
         PathTransition transitionMars = new PathTransition();
-        transitionMars.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*mars.getPrevolution()*3600*24));
-        transitionMars.setNode(rMars);
-        transitionMars.setPath(eMars);
-        transitionMars.setCycleCount(PathTransition.INDEFINITE);
-        transitionMars.setInterpolator(Interpolator.LINEAR);
-        transitionMars.play();
-        
-        
-
+        Animation animMars = new Animation(transitionMars, mars, rMars, eMars);
+        animMars.affAnim();
         
 
 
@@ -237,13 +198,8 @@ public class App extends Application {
         
         //Animation Jupiter
         PathTransition transitionJupiter = new PathTransition();
-        transitionJupiter.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*jupiter.getPrevolution()*3600*24));
-        transitionJupiter.setNode(rJupiter);
-        transitionJupiter.setPath(eJupiter);
-        transitionJupiter.setCycleCount(PathTransition.INDEFINITE);
-        transitionJupiter.setInterpolator(Interpolator.LINEAR);
-        transitionJupiter.play();
-
+        Animation animJupiter = new Animation(transitionJupiter, jupiter, rJupiter, eJupiter);
+        animJupiter.affAnim();
 
 
         //Creation orbite Saturne
@@ -266,12 +222,8 @@ public class App extends Application {
         
         //Animation Saturne
         PathTransition transitionSaturne = new PathTransition();
-        transitionSaturne.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*saturne.getPrevolution()*3600*24));
-        transitionSaturne.setNode(rSaturne);
-        transitionSaturne.setPath(eSaturne);
-        transitionSaturne.setCycleCount(PathTransition.INDEFINITE);
-        transitionSaturne.setInterpolator(Interpolator.LINEAR);
-        transitionSaturne.play();
+        Animation animSaturne = new Animation(transitionSaturne, saturne, rSaturne, eSaturne);
+        animSaturne.affAnim();
 
 
         //Creation orbite Uranus
@@ -294,12 +246,8 @@ public class App extends Application {
         
         //Animation Uranus
         PathTransition transitionUranus = new PathTransition();
-        transitionUranus.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*uranus.getPrevolution()*3600*24));
-        transitionUranus.setNode(rUranus);
-        transitionUranus.setPath(eUranus);
-        transitionUranus.setCycleCount(PathTransition.INDEFINITE);
-        transitionUranus.setInterpolator(Interpolator.LINEAR);
-        transitionUranus.play();
+        Animation animUranus = new Animation(transitionUranus, uranus, rUranus, eUranus);
+        animUranus.affAnim();
 
 
 
@@ -324,12 +272,8 @@ public class App extends Application {
 
         //Animation Neptune
         PathTransition transitionNeptune = new PathTransition();
-        transitionNeptune.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*neptune.getPrevolution()*3600*24));
-        transitionNeptune.setNode(rNeptune);
-        transitionNeptune.setPath(eNeptune);
-        transitionNeptune.setCycleCount(PathTransition.INDEFINITE);
-        transitionNeptune.setInterpolator(Interpolator.LINEAR);
-        transitionNeptune.play();
+        Animation animNeptune = new Animation(transitionNeptune, neptune, rNeptune, eNeptune);
+        animNeptune.affAnim();
 
         
 
