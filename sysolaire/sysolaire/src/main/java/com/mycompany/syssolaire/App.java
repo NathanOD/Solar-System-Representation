@@ -51,7 +51,7 @@ public class App extends Application {
         scene.setFill(Color.rgb(1, 0, 41));
 
         // Creation soleil
-        Astre soleil = new Astre(35, Color.rgb(255, 178, 1), 0);
+        Astre soleil = new Astre(55, Color.rgb(255, 178, 1), 0);
 
         // Creation representation Soleil
         // Circle rSoleil = new Circle();
@@ -204,7 +204,7 @@ public class App extends Application {
         animJupiter.affAnim();
 
         // Creation de Saturne et de son orbite
-        Astre saturne = new Astre(35, Color.rgb(159, 193, 133), 10754);
+        Astre saturne = new Astre(20, Color.rgb(159, 193, 133), 10754);
         Orbite oSaturne = new Orbite(740, 390, 427, 224, saturne);
 
         // Creation representation orbite
