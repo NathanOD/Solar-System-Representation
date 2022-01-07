@@ -23,18 +23,10 @@ import javafx.scene.text.Font;
  * @author Thoma
  */
 public class rAstre {
-<<<<<<< HEAD
-    
     Sphere c;
-=======
-    /**
-     * Cercle representant la planète
-     */
-    Circle c;
     /**
      * Astre associé
      */
->>>>>>> e6697f356c947150a6262d7a2c653fb7b866d1b0
     Astre a;
     /**
      * Label associé pour la légende
@@ -53,9 +45,6 @@ public class rAstre {
      */
     double texteY;
 
-<<<<<<< HEAD
-    public rAstre(Sphere c, Astre a, Label l, URL u, double texteX, double texteY) {
-=======
     /**
      * Constructeur
      * @param c
@@ -65,8 +54,7 @@ public class rAstre {
      * @param texteX
      * @param texteY 
      */
-    public rAstre(Circle c, Astre a, Label l, URL u, double texteX, double texteY) {
->>>>>>> e6697f356c947150a6262d7a2c653fb7b866d1b0
+    public rAstre(Sphere c, Astre a, Label l, URL u, double texteX, double texteY) {
         this.c = c;
         this.a = a;
         this.l = l;
@@ -98,14 +86,9 @@ public class rAstre {
         InputStream is = uconn.getInputStream();
         //Creation de l'image
         Image i = new Image(is);
-<<<<<<< HEAD
         PhongMaterial phongMaterial = new PhongMaterial();
         phongMaterial.setDiffuseMap(i);
         c.setMaterial(phongMaterial);
-=======
-        //Association entre le cercle représentant la planète et l'image
-        c.setFill(new ImagePattern(i));
->>>>>>> e6697f356c947150a6262d7a2c653fb7b866d1b0
     }
     
     /**

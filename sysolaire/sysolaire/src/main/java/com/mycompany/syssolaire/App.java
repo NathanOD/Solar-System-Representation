@@ -17,7 +17,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
@@ -65,8 +64,7 @@ public class App extends Application {
         // Creation de son label
         Label tSoleil = new Label("Soleil");
         // Creation de l'url afin d'obtenir la texture
-        URL urlSoleil = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.png");
+        URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.jpg");
         // Creation d'une représentation
         rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5);
         // Application des méthodes pour affichage
@@ -85,8 +83,7 @@ public class App extends Application {
         // Representation planète
         Sphere rMercure = new Sphere();
         Label tMercure = new Label("Mercure");
-        URL urlMercure = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.png");
+        URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.jpg");
         rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30);
         repMercure.affichagePlanete();
         repMercure.affichageTexte();
@@ -109,8 +106,7 @@ public class App extends Application {
         // Representation planete
         Sphere rVenus = new Sphere();
         Label tVenus = new Label("Venus");
-        URL urlVenus = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.png");
+        URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.jpg");
         rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55);
         repVenus.affichagePlanete();
         repVenus.affichageTexte();
@@ -141,8 +137,7 @@ public class App extends Application {
         // Creation de son label
         Label tTerre = new Label("Terre");
         // Creation de son URL afin d'obtenir la texture
-        //URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.png");
-        URL urlTerre = new URL("http://flatplanet.sourceforge.net/maps/images/PathfinderMap_hires.jpg");
+        URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.jpg");
         // Creation de la représentation astrale
         rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80);
         // Affichage de la planète
@@ -174,8 +169,7 @@ public class App extends Application {
         // Representation planete
         Sphere rMars = new Sphere();
         Label tMars = new Label("Mars");
-        URL urlMars = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.png");
+        URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.jpg");
         rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105);
         repMars.affichagePlanete();
         repMars.affichageTexte();
@@ -198,8 +192,7 @@ public class App extends Application {
         // Representation planete
         Sphere rJupiter = new Sphere();
         Label tJupiter = new Label("Jupiter");
-        URL urlJupiter = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.png");
+        URL urlJupiter = new URL( "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
         rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130);
         repJupiter.affichagePlanete();
         repJupiter.affichageTexte();
@@ -222,8 +215,7 @@ public class App extends Application {
         // Representation planete
         Sphere rSaturne = new Sphere();
         Label tSaturne = new Label("Saturne");
-        URL urlSaturne = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.png");
+        URL urlSaturne = new URL(  "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.jpg");
         rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155);
         repSaturne.affichagePlanete();
         repSaturne.affichageTexte();
@@ -244,8 +236,7 @@ public class App extends Application {
         orbUranus.affichage();
         Sphere rUranus = new Sphere();
         Label tUranus = new Label("Uranus");
-        URL urlUranus = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.png");
+        URL urlUranus = new URL(   "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
         rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180);
         // Affichage
         repUranus.affichagePlanete();
@@ -269,8 +260,7 @@ public class App extends Application {
         // Representation planete
         Sphere rNeptune = new Sphere();
         Label tNeptune = new Label("Neptune");
-        URL urlNeptune = new URL(
-                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.png");
+        URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.jpg");
         rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205);
         repNeptune.affichagePlanete();
         repNeptune.affichageTexte();

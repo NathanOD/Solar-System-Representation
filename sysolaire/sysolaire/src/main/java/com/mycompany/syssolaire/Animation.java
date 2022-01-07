@@ -16,21 +16,8 @@ public class Animation {
      * Astre associé
      */
     Astre a;
-<<<<<<< HEAD
     Sphere c;
     Ellipse e;
-
-    public Animation(PathTransition pt, Astre a, Sphere c, Ellipse e) {
-=======
-    /**
-     * Cercle représenatant la planète
-     */
-    Circle c;
-    /**
-     * Ellipse représenant l'orbite
-     */
-    Ellipse e;
-
     /**
      * Constructeur
      * @param pt
@@ -38,8 +25,7 @@ public class Animation {
      * @param c
      * @param e 
      */
-    public Animation(PathTransition pt, Astre a, Circle c, Ellipse e) {
->>>>>>> e6697f356c947150a6262d7a2c653fb7b866d1b0
+    public Animation(PathTransition pt, Astre a, Sphere c, Ellipse e) {
         this.pt = pt;
         this.a = a;
         this.c = c;
