@@ -11,8 +11,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
+import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
 
 /**
@@ -21,14 +24,14 @@ import javafx.scene.text.Font;
  */
 public class rAstre {
     
-    Circle c;
+    Sphere c;
     Astre a;
     Label l;
     URL u;
     double texteX;
     double texteY;
 
-    public rAstre(Circle c, Astre a, Label l, URL u, double texteX, double texteY) {
+    public rAstre(Sphere c, Astre a, Label l, URL u, double texteX, double texteY) {
         this.c = c;
         this.a = a;
         this.l = l;
@@ -50,7 +53,9 @@ public class rAstre {
         URLConnection uconn = u.openConnection();
         InputStream is = uconn.getInputStream();
         Image i = new Image(is);
-        c.setFill(new ImagePattern(i));
+        PhongMaterial phongMaterial = new PhongMaterial();
+        phongMaterial.setDiffuseMap(i);
+        c.setMaterial(phongMaterial);
     }
     
     public void affichagePlanete(){

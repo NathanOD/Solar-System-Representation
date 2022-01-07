@@ -4,15 +4,16 @@ import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Sphere;
 import javafx.util.Duration;
 
 public class Animation {
     PathTransition pt;
     Astre a;
-    Circle c;
+    Sphere c;
     Ellipse e;
 
-    public Animation(PathTransition pt, Astre a, Circle c, Ellipse e) {
+    public Animation(PathTransition pt, Astre a, Sphere c, Ellipse e) {
         this.pt = pt;
         this.a = a;
         this.c = c;
