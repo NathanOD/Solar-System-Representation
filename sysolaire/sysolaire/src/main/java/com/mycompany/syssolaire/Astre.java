@@ -64,18 +64,5 @@ public class Astre {
         return prevolution;
     }
     
-    public void representation (){
-        Circle r = new Circle();
-        r.setCenterX(740);
-        r.setCenterY(390);
-        r.setRadius(this.getRayon());
-        r.setFill(this.getCouleur());
-        //Creation de son label
-        Label t = new Label("Soleil");
-        t.setLayoutX(5);
-        t.setLayoutY(5);
-        t.setFont(Font.font("Calibri", 15.));
-        t.setTextFill(this.getCouleur());
-    }
     
 }

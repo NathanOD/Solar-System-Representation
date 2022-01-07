@@ -4,8 +4,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 
 public class rOrbite {
-    
+    /**
+     * Ellipse représentant l'orbite
+     */
     Ellipse e;
+    /**
+     * Orbite associée
+     */
     Orbite o;
 
     /**
@@ -18,14 +23,17 @@ public class rOrbite {
         this.o = o;
     }
     
+    /**
+     * Methode permettant de gérer l'affichage de l'orbite
+     */
     public void affichage(){
-        //Coordonnées centre
+        //Definition du centre de l'orbite
         e.setCenterX(o.getPcentrex());
         e.setCenterY(o.getPcentrey());
-        //Longueur et largeur
+        //Definition de la longueur et de largeur de l'orbite
         e.setRadiusX(o.getLongueur());
         e.setRadiusY(o.getLargeur());
-        //Couleur
+        //Gestion de la couleur de fond, de l'épaisseur et de la couleur de la bordure
         e.setStroke(Color.rgb(228, 225, 220));
         e.setStrokeWidth(1);
         e.setFill(Color.rgb(1, 0, 41));
