@@ -559,10 +559,16 @@ public class App extends Application {
                 case W:
                     groupePlanete.translateZProperty().set(groupePlanete.getTranslateZ() - 100);
                     break;
+                case A:
+                    groupePlanete.translateXProperty().set(groupePlanete.getTranslateX() + 20);
+                    break;
                 case D:
+                    groupePlanete.translateXProperty().set(groupePlanete.getTranslateX() - 20);
+                    break;
+                case Z:
                     groupePlanete.rotateByX(10);
                     break;
-                case A:
+                case X:
                     groupePlanete.rotateByX(-10);
                     break;
                 case Q:
@@ -578,7 +584,8 @@ public class App extends Application {
         // affichés
         groupePlanete.getChildren().add(lumiere);
         groupePlanete.getChildren().addAll(eNeptune, eUranus, eSaturne, eJupiter, eMars, eTerre, eVenus, eMercure);
-        groupePlanete.getChildren().addAll(rSoleil, rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
+        groupePlanete.getChildren().addAll(rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
+        groupePlanete.getChildren().add(rSoleil);
         root.getChildren().addAll(tSoleil, tMercure, tVenus, tTerre, tMars, tJupiter, tSaturne, tUranus, tNeptune);
         root.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus, cbNeptune);
         root.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
