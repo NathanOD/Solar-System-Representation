@@ -36,7 +36,7 @@ public class rOrbite {
         //Gestion de la couleur de fond, de l'épaisseur et de la couleur de la bordure
         e.setStroke(Color.rgb(228, 225, 220));
         e.setStrokeWidth(1);
-        e.setFill(Color.rgb(1, 0, 41));
+        e.setFill(Color.TRANSPARENT);
     }
     
     

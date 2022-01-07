@@ -45,7 +45,7 @@ public class App extends Application {
         Group root = new Group();
         SmartGroup groupePlanete = new SmartGroup();
         // Scene de taille 1480x780 pixels
-        Scene scene = new Scene(root, 1480, 780);
+        Scene scene = new Scene(root, 1480, 780, true);
         //Scene scene2 = new Scene(groupePlanete, 1480, 780);
         stage.setScene(scene);
         // Modification du nom
