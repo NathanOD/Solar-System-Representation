@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+
+import javafx.geometry.Point3D;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -90,7 +92,7 @@ public class rAstre {
         PhongMaterial phongMaterial = new PhongMaterial();
         phongMaterial.setDiffuseMap(i);
         c.setMaterial(phongMaterial);
-        Rotate rot = new Rotate(0,90,0);
+        Rotate rot = new Rotate(90,Rotate.X_AXIS);
         c.getTransforms().add(rot);
     }
     

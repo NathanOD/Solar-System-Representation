@@ -192,7 +192,8 @@ public class App extends Application {
         // Representation planete
         Sphere rJupiter = new Sphere();
         Label tJupiter = new Label("Jupiter");
-        URL urlJupiter = new URL( "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
+        //URL urlJupiter = new URL( "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
+        URL urlJupiter = new URL("http://cdn.sci-news.com/images/enlarge2/image_3337_1e-Jupiter-Map.jpg");
         rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130);
         repJupiter.affichagePlanete();
         repJupiter.affichageTexte();
