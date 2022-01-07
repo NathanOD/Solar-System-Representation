@@ -1,7 +1,9 @@
 package com.mycompany.syssolaire;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.net.URLConnection;
 
 import javafx.animation.PathTransition;
 import javafx.application.Application;
@@ -10,13 +12,16 @@ import javafx.event.ActionEvent;
 import javafx.scene.Camera;
 import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
+import javafx.scene.PointLight;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
@@ -50,6 +55,11 @@ public class App extends Application {
         // Choix couleur scene
         scene.setFill(Color.rgb(1, 0, 41));
 
+        PointLight lumiere = new PointLight(Color.WHITE);
+        //lumiere.
+        lumiere.setLayoutX(740);
+        lumiere.setLayoutY(390);
+
         // Creation soleil
         Astre soleil = new Astre(55, Color.rgb(255, 178, 1), 0);
 
@@ -70,7 +80,17 @@ public class App extends Application {
         // Application des méthodes pour affichage
         repSoleil.affichagePlanete();
         repSoleil.affichageTexte();
-        repSoleil.affichageTexture();
+        //repSoleil.affichageTexture();
+
+        URLConnection ucSoleil = urlSoleil.openConnection();
+        InputStream isSoleil = ucSoleil.getInputStream();
+        Image iSoleil = new Image(isSoleil);
+        PhongMaterial pSoleil = new PhongMaterial();
+        pSoleil.setDiffuseMap(iSoleil);
+        pSoleil.setSelfIlluminationMap(iSoleil);
+        rSoleil.setMaterial(pSoleil);
+        Rotate rotSoleil = new Rotate(90,Rotate.X_AXIS);
+        rSoleil.getTransforms().add(rotSoleil);
 
         // Creation de Mercure et de son orbite
         Astre mercure = new Astre(3, Color.rgb(162, 158, 156), 87.969);
@@ -556,6 +576,7 @@ public class App extends Application {
 
         // Mise en relation des éléments créés avec la racine pour qu'ils soient
         // affichés
+        groupePlanete.getChildren().add(lumiere);
         groupePlanete.getChildren().addAll(eNeptune, eUranus, eSaturne, eJupiter, eMars, eTerre, eVenus, eMercure);
         groupePlanete.getChildren().addAll(rSoleil, rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
         root.getChildren().addAll(tSoleil, tMercure, tVenus, tTerre, tMars, tJupiter, tSaturne, tUranus, tNeptune);
