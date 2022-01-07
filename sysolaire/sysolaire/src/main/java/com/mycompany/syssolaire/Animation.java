@@ -2,7 +2,6 @@ package com.mycompany.syssolaire;
 
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.util.Duration;
