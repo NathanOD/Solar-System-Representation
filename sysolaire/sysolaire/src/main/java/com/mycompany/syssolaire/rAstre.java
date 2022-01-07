@@ -26,7 +26,7 @@ import javafx.scene.transform.Rotate;
  * @author Thoma
  */
 public class rAstre {
-    Sphere c;
+    Sphere s;
     /**
      * Astre associé
      */
@@ -50,15 +50,15 @@ public class rAstre {
 
     /**
      * Constructeur
-     * @param c
+     * @param s
      * @param a
      * @param l
      * @param u
      * @param texteX
      * @param texteY 
      */
-    public rAstre(Sphere c, Astre a, Label l, URL u, double texteX, double texteY) {
-        this.c = c;
+    public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY) {
+        this.s = s;
         this.a = a;
         this.l = l;
         this.u = u;
@@ -91,16 +91,16 @@ public class rAstre {
         Image i = new Image(is);
         PhongMaterial phongMaterial = new PhongMaterial();
         phongMaterial.setDiffuseMap(i);
-        c.setMaterial(phongMaterial);
+        s.setMaterial(phongMaterial);
         Rotate rot = new Rotate(90,Rotate.X_AXIS);
-        c.getTransforms().add(rot);
+        s.getTransforms().add(rot);
     }
     
     /**
      * Methode definissant la taille d'affichage des planètes
      */
     public void affichagePlanete(){
-        c.setRadius(a.getRayon());
+        s.setRadius(a.getRayon());
     }
     
     

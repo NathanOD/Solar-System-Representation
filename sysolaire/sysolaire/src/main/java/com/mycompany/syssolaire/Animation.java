@@ -16,19 +16,19 @@ public class Animation {
      * Astre associé
      */
     Astre a;
-    Sphere c;
+    Sphere s;
     Ellipse e;
     /**
      * Constructeur
      * @param pt
      * @param a
-     * @param c
+     * @param s
      * @param e 
      */
-    public Animation(PathTransition pt, Astre a, Sphere c, Ellipse e) {
+    public Animation(PathTransition pt, Astre a, Sphere s, Ellipse e) {
         this.pt = pt;
         this.a = a;
-        this.c = c;
+        this.s = s;
         this.e = e;
     }
 
@@ -39,7 +39,7 @@ public class Animation {
         //Definition de la durée selon un facteur choisi
         pt.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*a.getPrevolution()*3600*24));
         //Definition de l'élément animé
-        pt.setNode(c);
+        pt.setNode(s);
         //Definition du chemin à suivre
         pt.setPath(e);
         //Animation souhaitée infinie
