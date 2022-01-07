@@ -17,6 +17,7 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
+import javafx.scene.transform.Rotate;
 
 /**
  *
@@ -89,6 +90,8 @@ public class rAstre {
         PhongMaterial phongMaterial = new PhongMaterial();
         phongMaterial.setDiffuseMap(i);
         c.setMaterial(phongMaterial);
+        Rotate rot = new Rotate(0,90,0);
+        c.getTransforms().add(rot);
     }
     
     /**
