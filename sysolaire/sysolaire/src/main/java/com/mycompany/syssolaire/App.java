@@ -52,27 +52,32 @@ public class App extends Application {
         
         //Creation representation Soleil
         Circle rSoleil = new Circle();
+        //Positionnement
         rSoleil.setCenterX(740);
         rSoleil.setCenterY(390);
         //Creation de son label
         Label tSoleil = new Label("Soleil");
+        //Creation de l'url afin d'obtenir la texture
         URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.png");
+        //Creation d'une représentation
         rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5);
+        //Application des méthodes pour affichage
         repSoleil.affichagePlanete();
         repSoleil.affichageTexte();
         repSoleil.affichageTexture();
         
         
-        //Creation orbite Mercure
+        
+        //Creation de Mercure et de son orbite
         Astre mercure = new Astre (3, Color.rgb(162, 158, 156), 87.969);
         Orbite oMercure = new Orbite (740, 390, 126, 66, mercure);
-        //Creation representation orbite
+        //Representation de l'orbite
         Ellipse eMercure = new Ellipse();
         rOrbite orbMercure = new rOrbite(eMercure, oMercure);
         orbMercure.affichage();
-        //Creation representation Mercure
+        
+        //Representation planète
         Circle rMercure = new Circle();
-        //Creation de son label
         Label tMercure = new Label("Mercure");
         URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.png");
         rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30);
@@ -87,32 +92,30 @@ public class App extends Application {
         
         
         
-        //Creation orbite Venus
+        //Creation Venus et son orbite
         Astre venus = new Astre (7, Color.rgb(142, 186, 195), 224.667);
         Orbite oVenus = new Orbite (740, 390, 186, 98, venus);
         
-        //Creation representation orbite
+        //Representation orbite
         Ellipse eVenus = new Ellipse();
-        
         rOrbite orbVenus = new rOrbite(eVenus, oVenus);
         orbVenus.affichage();
         
-        //Creation representation Venus
+        //Representation planete
         Circle rVenus = new Circle();
-        //Creation de son label
         Label tVenus = new Label("Venus");
         URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.png");
         rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55);
-        
         repVenus.affichagePlanete();
         repVenus.affichageTexte();
         repVenus.affichageTexture();
-
 
         //Animations
         PathTransition transitionVenus = new PathTransition();
         Animation animVenus = new Animation(transitionVenus, venus, rVenus, eVenus);
         animVenus.affAnim();
+        
+        
         
         //Creation Terre
         //Utilisation de la color.rgb qui donne une couleur à partir de la reference rgb
@@ -121,54 +124,57 @@ public class App extends Application {
         //Creation de l'orbite de la Terre
         Orbite oTerre = new Orbite (740, 390, 217, 114, terre);
         
-        //Creation representation orbite (une ellipse)
+        //Creation forme representant l'orbite (une ellipse)
         Ellipse eTerre = new Ellipse();
-        
+        //Creation de la représentation de l'orbite
         rOrbite orbTerre = new rOrbite(eTerre, oTerre);
+        //Affichage
         orbTerre.affichage();
-        //Creation representation Terre
+        
+        //Creation du cercle representant la Terre
         Circle rTerre = new Circle();
         //Creation de son label
         Label tTerre = new Label("Terre");
+        //Creation de son URL afin d'obtenir la texture
         URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.png");
+        //Creation de la représentation astrale
         rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80);
-        
+        //Affichage de la planète
         repTerre.affichagePlanete();
+        //Affichage du label associé
         repTerre.affichageTexte();
+        //Association avec la texture
         repTerre.affichageTexture();
-
-
 
         //Animations
         //Nous avons décidé d'utiliser des animations directement implantées dans javaFX
         //Creation d'un chemin pour l'animation
         PathTransition transitionTerre = new PathTransition();
+        //Creation d'une animation
         Animation animTerre = new Animation(transitionTerre, terre, rTerre, eTerre);
+        //Affichage de l'animation
         animTerre.affAnim();
         
         
         
-        //Creation orbite Mars
+        //Creation de Mars et de son orbite
         Astre mars = new Astre (5, Color.rgb(217, 72, 8), 686.885);
         Orbite oMars = new Orbite (740, 390, 256, 135, venus);
         
         
-        //Creation representation orbite
+        //Representation de l'orbite de Mars
         Ellipse eMars = new Ellipse();
-        
         rOrbite orbMars = new rOrbite(eMars, oMars);
         orbMars.affichage();
-        //Creation representation Venus
+        
+        //Representation planete
         Circle rMars = new Circle();
-        //Creation de son label
         Label tMars = new Label("Mars");
         URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.png");
         rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105);
-        
         repMars.affichagePlanete();
         repMars.affichageTexte();
         repMars.affichageTexture();
-
 
         //Animations
         PathTransition transitionMars = new PathTransition();
@@ -177,21 +183,20 @@ public class App extends Application {
         
 
 
-        //Creation orbite Jupiter
+        //Creation de Jupiter et de son orbite
         Astre jupiter = new Astre (25, Color.rgb(202, 158, 141), 4332.01);
         Orbite oJupiter = new Orbite (740, 390, 311, 164, jupiter);
         
-        //Creation representation orbite
+        //Representation orbite
         Ellipse eJupiter = new Ellipse();
-        
         rOrbite orbJupiter = new rOrbite(eJupiter, oJupiter);
         orbJupiter.affichage();
-        //Creation representation Jupiter
+        
+        //Representation planete
         Circle rJupiter = new Circle();
         Label tJupiter = new Label("Jupiter");
         URL urlJupiter = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.png");
         rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130);
-        
         repJupiter.affichagePlanete();
         repJupiter.affichageTexte();
         repJupiter.affichageTexture();
@@ -202,20 +207,21 @@ public class App extends Application {
         animJupiter.affAnim();
 
 
-        //Creation orbite Saturne
+        
+        //Creation de Saturne et de son orbite
         Astre saturne = new Astre (35, Color.rgb(159, 193, 133), 10754);
         Orbite oSaturne = new Orbite (740, 390, 427, 224, saturne);
         
         //Creation representation orbite
         Ellipse eSaturne = new Ellipse();
-        
         rOrbite orbSaturne = new rOrbite(eSaturne, oSaturne);
         orbSaturne.affichage();
+        
+        //Representation planete
         Circle rSaturne = new Circle();
         Label tSaturne = new Label("Saturne");
         URL urlSaturne = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.png");
         rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155);
-        
         repSaturne.affichagePlanete();
         repSaturne.affichageTexte();
         repSaturne.affichageTexture();
@@ -226,20 +232,20 @@ public class App extends Application {
         animSaturne.affAnim();
 
 
-        //Creation orbite Uranus
+        
+        //Creation d'Uranus et de son orbite
         Astre uranus = new Astre (12, Color.rgb(140, 218, 222), 30698);
         Orbite oUranus = new Orbite (740, 390, 559, 294, uranus);
         
         //Creation representation orbite
         Ellipse eUranus = new Ellipse();
-        
         rOrbite orbUranus = new rOrbite(eUranus, oUranus);
         orbUranus.affichage();
         Circle rUranus = new Circle();
         Label tUranus = new Label("Uranus");
         URL urlUranus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.png");
         rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180);
-        
+        //Affichage
         repUranus.affichagePlanete();
         repUranus.affichageTexte();
         repUranus.affichageTexture();
@@ -251,27 +257,25 @@ public class App extends Application {
 
 
 
-        //Creation orbite Neptune
+        //Creation de Neptune et de son orbite
         Astre neptune = new Astre (11, Color.rgb(47, 100, 223), 60216.8);
         Orbite oNeptune = new Orbite (740, 390, 644, 339, neptune);
         
-        //Creation representation orbite
+        //Representation orbite
         Ellipse eNeptune = new Ellipse();
-        
         rOrbite orbNeptune = new rOrbite(eNeptune, oNeptune);
         orbNeptune.affichage();
+        
+        //Representation planete
         Circle rNeptune = new Circle();
         Label tNeptune = new Label("Neptune");
         URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.png");
         rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205);
-        
         repNeptune.affichagePlanete();
         repNeptune.affichageTexte();
         repNeptune.affichageTexture();
 
-
         //Animation Neptune
-        //Test
         PathTransition transitionNeptune = new PathTransition();
         Animation animNeptune = new Animation(transitionNeptune, neptune, rNeptune, eNeptune);
         animNeptune.affAnim();
