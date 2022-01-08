@@ -9,17 +9,23 @@ import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.geometry.Pos;
 import javafx.scene.Camera;
 import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.PointLight;
 import javafx.scene.Scene;
+import javafx.scene.SubScene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Ellipse;
@@ -44,14 +50,18 @@ public class App extends Application {
         // Creation de la scène et association a la fenetre
         Group root = new Group();
         SmartGroup groupePlanete = new SmartGroup();
+        Group ginteraction = new Group();
+        Group glegende = new Group();
         // Scene de taille 1480x780 pixels
         Scene scene = new Scene(root, 1480, 780, true);
-        //Scene scene2 = new Scene(groupePlanete, 1480, 780);
         stage.setScene(scene);
         // Modification du nom
         stage.setTitle("Systeme Solaire");
+        /**
         // Association du nouveau groupe a la racine
+        root.getChildren().add(ginteraction);
         root.getChildren().add(groupePlanete);
+        **/
         // Choix couleur scene
         scene.setFill(Color.rgb(1, 0, 41));
 
@@ -582,15 +592,21 @@ public class App extends Application {
 
         // Mise en relation des éléments créés avec la racine pour qu'ils soient
         // affichés
+        
         groupePlanete.getChildren().add(lumiere);
         groupePlanete.getChildren().addAll(eNeptune, eUranus, eSaturne, eJupiter, eMars, eTerre, eVenus, eMercure);
         groupePlanete.getChildren().addAll(rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
         groupePlanete.getChildren().add(rSoleil);
-        root.getChildren().addAll(tSoleil, tMercure, tVenus, tTerre, tMars, tJupiter, tSaturne, tUranus, tNeptune);
-        root.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus, cbNeptune);
-        root.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
-
-
+        glegende.getChildren().addAll(tSoleil, tMercure, tVenus, tTerre, tMars, tJupiter, tSaturne, tUranus, tNeptune);
+        glegende.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus, cbNeptune);
+        ginteraction.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
+        
+        
+        
+        // Association du nouveau groupe a la racine
+        root.getChildren().add(ginteraction);
+        root.getChildren().add(groupePlanete);
+        root.getChildren().add(glegende);
         stage.setScene(scene);
         stage.show();
 
