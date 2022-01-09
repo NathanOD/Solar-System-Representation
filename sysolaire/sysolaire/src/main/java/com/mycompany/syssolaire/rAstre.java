@@ -62,9 +62,9 @@ public class rAstre {
      */
     Ellipse e;
 
-    
     /**
      * Constructeur
+     * 
      * @param s
      * @param a
      * @param l
@@ -74,9 +74,10 @@ public class rAstre {
      * @param cb
      * @param cbx
      * @param cby
-     * @param e 
+     * @param e
      */
-    public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY, CheckBox cb, double cbx, double cby, Ellipse e) {
+    public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY, CheckBox cb, double cbx, double cby,
+            Ellipse e) {
         this.s = s;
         this.a = a;
         this.l = l;
@@ -89,54 +90,57 @@ public class rAstre {
         this.e = e;
     }
 
-    
     /**
      * Methode gérant l'affichage du label
      */
-    public void affichageTexte(){
-        //Definition du positionnement
+    public void affichageTexte() {
+        // Definition du positionnement
         l.setLayoutX(texteX);
         l.setLayoutY(texteY);
-        //Gestion de la police, couleur et taille du texte
+        // Gestion de la police, couleur et taille du texte
         l.setFont(Font.font("Calibri", 15.));
         l.setTextFill(a.getCouleur());
     }
-    
+
     /**
      * Methode permettant d'afficher la texture des planètes
-     * @throws IOException 
+     * 
+     * @throws IOException
      */
-    public void affichageTexture() throws IOException{
-        //Recuperation de l'image à partir d'internet
+    public void affichageTexture() throws IOException {
+        // Recuperation de l'image à partir d'internet
         URLConnection uconn = u.openConnection();
         InputStream is = uconn.getInputStream();
-        //Creation de l'image
+        // Creation de l'image
         Image i = new Image(is);
+        // Création de la texture de l'astre
         PhongMaterial phongMaterial = new PhongMaterial();
         phongMaterial.setDiffuseMap(i);
+        // Application de la texture à l'astre
         s.setMaterial(phongMaterial);
-        Rotate rot = new Rotate(90,Rotate.X_AXIS);
+        // Rotation de la planète
+        Rotate rot = new Rotate(90, Rotate.X_AXIS);
         s.getTransforms().add(rot);
     }
-    
+
     /**
      * Methode definissant la taille d'affichage des planètes
      */
-    public void affichagePlanete(){
+    public void affichagePlanete() {
         s.setRadius(a.getRayon());
     }
-    
+
     /**
      * Methode gérant la checkbox de l'astre
      */
-    public void gestionCheckbox(){
-        //Modififcation du positionnement
+    public void gestionCheckbox() {
+        // Modififcation du positionnement
         cb.setLayoutX(cbx);
         cb.setLayoutY(cby);
         // Initialement selectionné
         cb.setSelected(true);
         cb.setOnAction((ActionEvent event) -> {
-            // Gestion affichage orbite + Planèt, si selectionné affiché
+            // Gestion affichage orbite + Planète, si selectionné affiché
             if (cb.isSelected()) {
                 e.setVisible(true);
                 s.setVisible(true);
@@ -146,5 +150,5 @@ public class rAstre {
             }
         });
     }
-    
+
 }

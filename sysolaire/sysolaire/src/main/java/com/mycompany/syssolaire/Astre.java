@@ -5,9 +5,7 @@
  */
 package com.mycompany.syssolaire;
 
-
 import javafx.scene.paint.Color;
-
 
 /**
  *
@@ -29,9 +27,10 @@ public class Astre {
 
     /**
      * Constructeur
+     * 
      * @param diametre
      * @param couleur
-     * @param prevolution 
+     * @param prevolution
      */
     public Astre(double rayon, Color couleur, double prevolution) {
         this.rayon = rayon;
@@ -41,7 +40,8 @@ public class Astre {
 
     /**
      * Getter diametre
-     * @return 
+     * 
+     * @return
      */
     public double getRayon() {
         return rayon;
@@ -49,7 +49,8 @@ public class Astre {
 
     /**
      * Getter couleur
-     * @return 
+     * 
+     * @return
      */
     public Color getCouleur() {
         return couleur;
@@ -57,11 +58,11 @@ public class Astre {
 
     /**
      * Getter periode revolution
-     * @return 
+     * 
+     * @return
      */
     public double getPrevolution() {
         return prevolution;
     }
-    
-    
+
 }

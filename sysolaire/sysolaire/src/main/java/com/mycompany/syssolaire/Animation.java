@@ -17,12 +17,14 @@ public class Animation {
     Astre a;
     Sphere s;
     Ellipse e;
+
     /**
      * Constructeur
+     * 
      * @param pt
      * @param a
      * @param s
-     * @param e 
+     * @param e
      */
     public Animation(PathTransition pt, Astre a, Sphere s, Ellipse e) {
         this.pt = pt;
@@ -34,18 +36,18 @@ public class Animation {
     /**
      * Methode gérant l'affichage des animations
      */
-    public void affAnim(){
-        //Definition de la durée selon un facteur choisi
-        pt.setDuration(Duration.seconds(5.77*Math.pow(10, -7)*a.getPrevolution()*3600*24));
-        //Definition de l'élément animé
+    public void affAnim() {
+        // Definition de la durée selon un facteur choisi
+        pt.setDuration(Duration.seconds(5.77 * Math.pow(10, -7) * a.getPrevolution() * 3600 * 24));
+        // Definition de l'élément animé
         pt.setNode(s);
-        //Definition du chemin à suivre
+        // Definition du chemin à suivre
         pt.setPath(e);
-        //Animation souhaitée infinie
+        // Animation souhaitée infinie
         pt.setCycleCount(PathTransition.INDEFINITE);
-        //Animation à vitesse linéaire
+        // Animation à vitesse linéaire
         pt.setInterpolator(Interpolator.LINEAR);
-        //Lancement
+        // Lancement
         pt.play();
     }
 }
