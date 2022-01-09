@@ -20,7 +20,7 @@ public class Astre {
      */
     private double rayon;
     /**
-     * Couleur de l'astre
+     * Couleur de l'astre (utilisé pour la légende)
      */
     private Color couleur;
     /**

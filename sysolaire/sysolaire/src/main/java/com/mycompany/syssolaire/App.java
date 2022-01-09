@@ -47,8 +47,11 @@ public class App extends Application {
         // Tout est défini selon le nombre de pixels
         // L'axe x part du haut gauche de la fenetre vers la droite
         // L'axe y part du haut gauche et se dirige vers le bas
-        // Creation de la scène et association a la fenetre
+        
+        // Creation des groupes nécessaires
+        //Creation de la racine
         Group root = new Group();
+        //Creation des groupes complementaires
         SmartGroup groupePlanete = new SmartGroup();
         Group ginteraction = new Group();
         Group glegende = new Group();
@@ -57,28 +60,23 @@ public class App extends Application {
         stage.setScene(scene);
         // Modification du nom
         stage.setTitle("Systeme Solaire");
-        /**
-        // Association du nouveau groupe a la racine
-        root.getChildren().add(ginteraction);
-        root.getChildren().add(groupePlanete);
-        **/
+
         // Choix couleur scene
         scene.setFill(Color.rgb(1, 0, 41));
 
+        //Creation d'une lumière de couleur blanche
         PointLight lumiere = new PointLight(Color.WHITE);
-        //lumiere.
+        //Positionnement
         lumiere.setLayoutX(740);
         lumiere.setLayoutY(390);
 
+        
         // Creation soleil
         Astre soleil = new Astre(55, Color.rgb(255, 178, 1), 0);
 
         // Creation representation Soleil
-        // Circle rSoleil = new Circle();
         Sphere rSoleil = new Sphere();
         // Positionnement
-        // rSoleil.setCenterX(740);
-        // rSoleil.setCenterY(390);
         rSoleil.setLayoutX(740);
         rSoleil.setLayoutY(390);
         // Creation de son label
@@ -90,18 +88,23 @@ public class App extends Application {
         // Application des méthodes pour affichage
         repSoleil.affichagePlanete();
         repSoleil.affichageTexte();
-        //repSoleil.affichageTexture();
 
+        //Gestion de l'apparence
+        //Creation de la texture par image
         URLConnection ucSoleil = urlSoleil.openConnection();
         InputStream isSoleil = ucSoleil.getInputStream();
         Image iSoleil = new Image(isSoleil);
         PhongMaterial pSoleil = new PhongMaterial();
         pSoleil.setDiffuseMap(iSoleil);
+        //Illumination du Soleil
         pSoleil.setSelfIlluminationMap(iSoleil);
         rSoleil.setMaterial(pSoleil);
+        //Rotation afin d'obtenir la bonne orientation
         Rotate rotSoleil = new Rotate(90,Rotate.X_AXIS);
         rSoleil.getTransforms().add(rotSoleil);
 
+        
+        
         // Creation de Mercure et de son orbite
         Astre mercure = new Astre(3, Color.rgb(162, 158, 156), 87.969);
         Orbite oMercure = new Orbite(740, 390, 126, 66, mercure);
@@ -124,6 +127,8 @@ public class App extends Application {
         Animation animMercure = new Animation(transitionMercure, mercure, rMercure, eMercure);
         animMercure.affAnim();
 
+        
+        
         // Creation Venus et son orbite
         Astre venus = new Astre(7, Color.rgb(142, 186, 195), 224.667);
         Orbite oVenus = new Orbite(740, 390, 186, 98, venus);
@@ -162,7 +167,7 @@ public class App extends Application {
         // Affichage
         orbTerre.affichage();
 
-        // Creation du cercle representant la Terre
+        // Creation de la sphère representant la Terre
         Sphere rTerre = new Sphere();
         // Creation de son label
         Label tTerre = new Label("Terre");
@@ -187,6 +192,8 @@ public class App extends Application {
         // Affichage de l'animation
         animTerre.affAnim();
 
+        
+        
         // Creation de Mars et de son orbite
         Astre mars = new Astre(5, Color.rgb(217, 72, 8), 686.885);
         Orbite oMars = new Orbite(740, 390, 256, 135, venus);
@@ -210,6 +217,8 @@ public class App extends Application {
         Animation animMars = new Animation(transitionMars, mars, rMars, eMars);
         animMars.affAnim();
 
+        
+        
         // Creation de Jupiter et de son orbite
         Astre jupiter = new Astre(25, Color.rgb(202, 158, 141), 4332.01);
         Orbite oJupiter = new Orbite(740, 390, 311, 164, jupiter);
@@ -233,6 +242,8 @@ public class App extends Application {
         Animation animJupiter = new Animation(transitionJupiter, jupiter, rJupiter, eJupiter);
         animJupiter.affAnim();
 
+        
+        
         // Creation de Saturne et de son orbite
         Astre saturne = new Astre(20, Color.rgb(159, 193, 133), 10754);
         Orbite oSaturne = new Orbite(740, 390, 427, 224, saturne);
@@ -256,6 +267,8 @@ public class App extends Application {
         Animation animSaturne = new Animation(transitionSaturne, saturne, rSaturne, eSaturne);
         animSaturne.affAnim();
 
+        
+        
         // Creation d'Uranus et de son orbite
         Astre uranus = new Astre(12, Color.rgb(140, 218, 222), 30698);
         Orbite oUranus = new Orbite(740, 390, 559, 294, uranus);
@@ -264,6 +277,8 @@ public class App extends Application {
         Ellipse eUranus = new Ellipse();
         rOrbite orbUranus = new rOrbite(eUranus, oUranus);
         orbUranus.affichage();
+        
+        //Representation planète
         Sphere rUranus = new Sphere();
         Label tUranus = new Label("Uranus");
         URL urlUranus = new URL(   "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
@@ -278,6 +293,8 @@ public class App extends Application {
         Animation animUranus = new Animation(transitionUranus, uranus, rUranus, eUranus);
         animUranus.affAnim();
 
+        
+        
         // Creation de Neptune et de son orbite
         Astre neptune = new Astre(11, Color.rgb(47, 100, 223), 60216.8);
         Orbite oNeptune = new Orbite(740, 390, 644, 339, neptune);
@@ -301,6 +318,8 @@ public class App extends Application {
         Animation animNeptune = new Animation(transitionNeptune, neptune, rNeptune, eNeptune);
         animNeptune.affAnim();
 
+        
+        
         // Creation du bouton play/pause
         ToggleButton BoutonPause = new ToggleButton("Play/Pause");
         // Positionnement
@@ -333,6 +352,8 @@ public class App extends Application {
             }
         });
 
+        
+        
         // Creation Slider Vitesse
         Slider sliderVitesse = new Slider();
         // Definition min et max (de x1 à x5)
@@ -343,9 +364,10 @@ public class App extends Application {
         // Positionnement
         sliderVitesse.setLayoutX(1300);
         sliderVitesse.setLayoutY(740);
+        
         // Label associé
         Label tSlider = new Label("Vitesse");
-        // Positionnement
+        // Positionnement du label
         tSlider.setLayoutX(1345);
         tSlider.setLayoutY(720);
         // Modification de la police et de la taille
@@ -402,6 +424,8 @@ public class App extends Application {
                     transitionNeptune.play();
                 });
 
+        
+        
         // Gestion des checkbox
         // Creation d'une checkbox
         CheckBox cbSoleil = new CheckBox();
@@ -547,6 +571,7 @@ public class App extends Application {
         
         // Partie 3D ############################################################
 
+        //Creation de la camera
         Camera camera = new PerspectiveCamera();
         //camera.relocate(790, 390);
         //camera.setLayoutX(790);
@@ -555,13 +580,17 @@ public class App extends Application {
 
         //Group world = createEnvironement();
 
+        //Definition du centre de la caméra
         groupePlanete.translateXProperty().set(1480 / 2);
         groupePlanete.translateYProperty().set(780 / 2);
         groupePlanete.translateZProperty().set(0);
         groupePlanete.setLayoutX(-740);
         groupePlanete.setLayoutY(-390);
 
+        //Gestion su mouvement de la caméra
         stage.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            //Lorsque une touche est appuyée alors le groupe planète se délace selon un incrément choisi
+            //Donnant ainsi l'impression que la caméra se déplace
             switch (event.getCode()) {
                 case S:
                     groupePlanete.translateZProperty().set(groupePlanete.getTranslateZ() + 100);
@@ -590,9 +619,7 @@ public class App extends Application {
             }
         });
 
-        // Mise en relation des éléments créés avec la racine pour qu'ils soient
-        // affichés
-        
+        // Mise en relation des éléments créés avec le groupe auxquels ils correspondent
         groupePlanete.getChildren().add(lumiere);
         groupePlanete.getChildren().addAll(eNeptune, eUranus, eSaturne, eJupiter, eMars, eTerre, eVenus, eMercure);
         groupePlanete.getChildren().addAll(rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
@@ -601,13 +628,12 @@ public class App extends Application {
         glegende.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus, cbNeptune);
         ginteraction.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
         
-        
-        
-        // Association du nouveau groupe a la racine
+        // Association des groupes à la racine afin qu'ils soient affichés
         root.getChildren().add(ginteraction);
         root.getChildren().add(groupePlanete);
         root.getChildren().add(glegende);
-        stage.setScene(scene);
+        
+        //Affichage
         stage.show();
 
     }
@@ -616,28 +642,5 @@ public class App extends Application {
         launch();
     }
 
-    class SmartGroup extends Group {
-
-        Rotate r;
-        Transform t = new Rotate();
-
-        void rotateByX(int ang) {
-            r = new Rotate(ang, Rotate.X_AXIS);
-            r.setPivotX(740);
-            r.setPivotY(390);
-            t = t.createConcatenation(r);
-            this.getTransforms().clear();
-            this.getTransforms().addAll(t);
-        }
-
-        void rotateByY(int ang) {
-            r = new Rotate(ang, Rotate.Y_AXIS);
-            r.setPivotX(740);
-            r.setPivotY(390);
-            t = t.createConcatenation(r);
-            this.getTransforms().clear();
-            this.getTransforms().addAll(t);
-        }
-    }
 
 }
