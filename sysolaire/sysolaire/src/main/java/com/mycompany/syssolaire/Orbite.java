@@ -79,27 +79,5 @@ public class Orbite {
     public double getLargeur() {
         return largeur;
     }
-
-    
-    /**
-     * Getter planete associee
-     * @return 
-     */
-    /*
-    public Astre getPlanete() {
-        return planete;
-    }
-    */
-    /**
-     * Setter planete
-     * @param planete 
-     */
-    /*
-    public void setPlanete(Astre planete) {
-        this.planete = planete;
-    }
-    */
-    
-    
-    
+      
 }
