@@ -40,11 +40,11 @@ public class App extends Application {
         // Tout est défini selon le nombre de pixels
         // L'axe x part du haut gauche de la fenetre vers la droite
         // L'axe y part du haut gauche et se dirige vers le bas
-        
+
         // Creation des groupes nécessaires
-        //Creation de la racine
+        // Creation de la racine
         Group root = new Group();
-        //Creation des groupes complementaires
+        // Creation des groupes complementaires
         SmartGroup groupePlanete = new SmartGroup();
         Group ginteraction = new Group();
         Group glegende = new Group();
@@ -57,13 +57,12 @@ public class App extends Application {
         // Choix couleur scene
         scene.setFill(Color.rgb(1, 0, 41));
 
-        //Creation d'une lumière de couleur blanche
+        // Creation d'une lumière de couleur blanche
         PointLight lumiere = new PointLight(Color.WHITE);
-        //Positionnement
+        // Positionnement
         lumiere.setLayoutX(740);
         lumiere.setLayoutY(390);
 
-        
         // Creation soleil
         Astre soleil = new Astre(55, Color.rgb(255, 178, 1), 0);
 
@@ -75,7 +74,8 @@ public class App extends Application {
         // Creation de son label
         Label tSoleil = new Label("Soleil");
         // Creation de l'url afin d'obtenir la texture
-        URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.jpg");
+        URL urlSoleil = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.jpg");
         CheckBox cbSoleil = new CheckBox();
         // Creation d'une représentation
         rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5, cbSoleil, 62, 7, new Ellipse());
@@ -84,22 +84,20 @@ public class App extends Application {
         repSoleil.affichageTexte();
         repSoleil.gestionCheckbox();
 
-        //Gestion de l'apparence
-        //Creation de la texture par image
+        // Gestion de l'apparence
+        // Creation de la texture par image
         URLConnection ucSoleil = urlSoleil.openConnection();
         InputStream isSoleil = ucSoleil.getInputStream();
         Image iSoleil = new Image(isSoleil);
         PhongMaterial pSoleil = new PhongMaterial();
         pSoleil.setDiffuseMap(iSoleil);
-        //Illumination du Soleil
+        // Illumination du Soleil
         pSoleil.setSelfIlluminationMap(iSoleil);
         rSoleil.setMaterial(pSoleil);
-        //Rotation afin d'obtenir la bonne orientation
-        Rotate rotSoleil = new Rotate(90,Rotate.X_AXIS);
+        // Rotation afin d'obtenir la bonne orientation
+        Rotate rotSoleil = new Rotate(90, Rotate.X_AXIS);
         rSoleil.getTransforms().add(rotSoleil);
 
-        
-        
         // Creation de Mercure et de son orbite
         Astre mercure = new Astre(3, Color.rgb(162, 158, 156), 87.969);
         Orbite oMercure = new Orbite(740, 390, 126, 66, mercure);
@@ -111,21 +109,20 @@ public class App extends Application {
         // Representation planète
         Sphere rMercure = new Sphere();
         Label tMercure = new Label("Mercure");
-        URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.jpg");
+        URL urlMercure = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.jpg");
         CheckBox cbMercure = new CheckBox();
         rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30, cbMercure, 62, 32, eMercure);
         repMercure.affichagePlanete();
         repMercure.affichageTexte();
         repMercure.affichageTexture();
         repMercure.gestionCheckbox();
-        
+
         // Animation
         PathTransition transitionMercure = new PathTransition();
         Animation animMercure = new Animation(transitionMercure, mercure, rMercure, eMercure);
         animMercure.affAnim();
 
-        
-        
         // Creation Venus et son orbite
         Astre venus = new Astre(7, Color.rgb(142, 186, 195), 224.667);
         Orbite oVenus = new Orbite(740, 390, 186, 98, venus);
@@ -138,7 +135,8 @@ public class App extends Application {
         // Representation planete
         Sphere rVenus = new Sphere();
         Label tVenus = new Label("Venus");
-        URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.jpg");
+        URL urlVenus = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.jpg");
         CheckBox cbVenus = new CheckBox();
         rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55, cbVenus, 62, 57, eVenus);
         repVenus.affichagePlanete();
@@ -171,8 +169,9 @@ public class App extends Application {
         // Creation de son label
         Label tTerre = new Label("Terre");
         // Creation de son URL afin d'obtenir la texture
-        URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.jpg");
-        //Creation de la checkbox
+        URL urlTerre = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.jpg");
+        // Creation de la checkbox
         CheckBox cbTerre = new CheckBox();
         // Creation de la représentation astrale
         rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80, cbTerre, 62, 82, eTerre);
@@ -182,7 +181,7 @@ public class App extends Application {
         repTerre.affichageTexte();
         // Association avec la texture
         repTerre.affichageTexture();
-        //Affichage des checkbox
+        // Affichage des checkbox
         repTerre.gestionCheckbox();
 
         // Animations
@@ -195,8 +194,6 @@ public class App extends Application {
         // Affichage de l'animation
         animTerre.affAnim();
 
-        
-        
         // Creation de Mars et de son orbite
         Astre mars = new Astre(5, Color.rgb(217, 72, 8), 686.885);
         Orbite oMars = new Orbite(740, 390, 256, 135, venus);
@@ -209,7 +206,8 @@ public class App extends Application {
         // Representation planete
         Sphere rMars = new Sphere();
         Label tMars = new Label("Mars");
-        URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.jpg");
+        URL urlMars = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.jpg");
         CheckBox cbMars = new CheckBox();
         rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105, cbMars, 62, 107, eMars);
         repMars.affichagePlanete();
@@ -222,8 +220,6 @@ public class App extends Application {
         Animation animMars = new Animation(transitionMars, mars, rMars, eMars);
         animMars.affAnim();
 
-        
-        
         // Creation de Jupiter et de son orbite
         Astre jupiter = new Astre(25, Color.rgb(202, 158, 141), 4332.01);
         Orbite oJupiter = new Orbite(740, 390, 311, 164, jupiter);
@@ -236,7 +232,8 @@ public class App extends Application {
         // Representation planete
         Sphere rJupiter = new Sphere();
         Label tJupiter = new Label("Jupiter");
-        URL urlJupiter = new URL( "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
+        URL urlJupiter = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
         CheckBox cbJupiter = new CheckBox();
         rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130, cbJupiter, 62, 132, eJupiter);
         repJupiter.affichagePlanete();
@@ -249,8 +246,6 @@ public class App extends Application {
         Animation animJupiter = new Animation(transitionJupiter, jupiter, rJupiter, eJupiter);
         animJupiter.affAnim();
 
-        
-        
         // Creation de Saturne et de son orbite
         Astre saturne = new Astre(20, Color.rgb(159, 193, 133), 10754);
         Orbite oSaturne = new Orbite(740, 390, 427, 224, saturne);
@@ -263,7 +258,8 @@ public class App extends Application {
         // Representation planete
         Sphere rSaturne = new Sphere();
         Label tSaturne = new Label("Saturne");
-        URL urlSaturne = new URL(  "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.jpg");
+        URL urlSaturne = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.jpg");
         CheckBox cbSaturne = new CheckBox();
         rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155, cbSaturne, 62, 157, eSaturne);
         repSaturne.affichagePlanete();
@@ -276,8 +272,6 @@ public class App extends Application {
         Animation animSaturne = new Animation(transitionSaturne, saturne, rSaturne, eSaturne);
         animSaturne.affAnim();
 
-        
-        
         // Creation d'Uranus et de son orbite
         Astre uranus = new Astre(12, Color.rgb(140, 218, 222), 30698);
         Orbite oUranus = new Orbite(740, 390, 559, 294, uranus);
@@ -286,11 +280,12 @@ public class App extends Application {
         Ellipse eUranus = new Ellipse();
         rOrbite orbUranus = new rOrbite(eUranus, oUranus);
         orbUranus.affichage();
-        
+
         // Representation planète
         Sphere rUranus = new Sphere();
         Label tUranus = new Label("Uranus");
-        URL urlUranus = new URL(   "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
+        URL urlUranus = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
         CheckBox cbUranus = new CheckBox();
         rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180, cbUranus, 62, 182, eUranus);
         repUranus.affichagePlanete();
@@ -303,8 +298,6 @@ public class App extends Application {
         Animation animUranus = new Animation(transitionUranus, uranus, rUranus, eUranus);
         animUranus.affAnim();
 
-        
-        
         // Creation de Neptune et de son orbite
         Astre neptune = new Astre(11, Color.rgb(47, 100, 223), 60216.8);
         Orbite oNeptune = new Orbite(740, 390, 644, 339, neptune);
@@ -317,7 +310,8 @@ public class App extends Application {
         // Representation planete
         Sphere rNeptune = new Sphere();
         Label tNeptune = new Label("Neptune");
-        URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.jpg");
+        URL urlNeptune = new URL(
+                "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.jpg");
         CheckBox cbNeptune = new CheckBox();
         rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205, cbNeptune, 62, 207, eNeptune);
         repNeptune.affichagePlanete();
@@ -330,8 +324,6 @@ public class App extends Application {
         Animation animNeptune = new Animation(transitionNeptune, neptune, rNeptune, eNeptune);
         animNeptune.affAnim();
 
-        
-        
         // Creation du bouton play/pause
         ToggleButton BoutonPause = new ToggleButton("Play/Pause");
         // Positionnement
@@ -364,8 +356,6 @@ public class App extends Application {
             }
         });
 
-        
-        
         // Creation Slider Vitesse
         Slider sliderVitesse = new Slider();
         // Definition min et max (de x1 à x5)
@@ -376,7 +366,7 @@ public class App extends Application {
         // Positionnement
         sliderVitesse.setLayoutX(1300);
         sliderVitesse.setLayoutY(740);
-        
+
         // Label associé
         Label tSlider = new Label("Vitesse");
         // Positionnement du label
@@ -437,29 +427,23 @@ public class App extends Application {
                 });
 
         
-       
-        // Partie 3D ############################################################
-
-        //Creation de la camera
+        // Creation de la camera
         Camera camera = new PerspectiveCamera();
-        //camera.relocate(790, 390);
-        //camera.setLayoutX(790);
-        //camera.setLayoutY(390);
+        // Application de la camera à la scène
         scene.setCamera(camera);
 
-        //Group world = createEnvironement();
-
-        //Definition du centre de la caméra
+        // Definition du centre de la caméra
         groupePlanete.translateXProperty().set(1480 / 2);
         groupePlanete.translateYProperty().set(780 / 2);
         groupePlanete.translateZProperty().set(0);
         groupePlanete.setLayoutX(-740);
         groupePlanete.setLayoutY(-390);
 
-        //Gestion su mouvement de la caméra
+        // Gestion du mouvement de la caméra
         stage.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            //Lorsque une touche est appuyée alors le groupe planète se délace selon un incrément choisi
-            //Donnant ainsi l'impression que la caméra se déplace
+            // Lorsque une touche est appuyée alors le groupe planète se délace selon un
+            // incrément choisi
+            // Donnant ainsi l'impression que la caméra se déplace
             switch (event.getCode()) {
                 case S:
                     groupePlanete.translateZProperty().set(groupePlanete.getTranslateZ() + 100);
@@ -494,15 +478,16 @@ public class App extends Application {
         groupePlanete.getChildren().addAll(rMercure, rVenus, rTerre, rMars, rJupiter, rSaturne, rUranus, rNeptune);
         groupePlanete.getChildren().add(rSoleil);
         glegende.getChildren().addAll(tSoleil, tMercure, tVenus, tTerre, tMars, tJupiter, tSaturne, tUranus, tNeptune);
-        glegende.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus, cbNeptune);
+        glegende.getChildren().addAll(cbSoleil, cbMercure, cbVenus, cbTerre, cbMars, cbJupiter, cbSaturne, cbUranus,
+                cbNeptune);
         ginteraction.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
-        
+
         // Association des groupes à la racine afin qu'ils soient affichés
         root.getChildren().add(ginteraction);
         root.getChildren().add(groupePlanete);
         root.getChildren().add(glegende);
-        
-        //Affichage
+
+        // Affichage
         stage.show();
 
     }
@@ -510,6 +495,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 
 }

@@ -13,7 +13,7 @@ import javafx.scene.transform.Transform;
  *
  * @author Thoma
  */
-public class SmartGroup extends Group{
+public class SmartGroup extends Group {
     /**
      * Rotation
      */
@@ -25,14 +25,15 @@ public class SmartGroup extends Group{
 
     /**
      * Gestion d'une rotation autour de l'axe X
-     * @param ang 
+     * 
+     * @param ang
      */
     void rotateByX(int ang) {
         r = new Rotate(ang, Rotate.X_AXIS);
-        //Definition du point pivot (le Soleil)
+        // Definition du point pivot (le Soleil)
         r.setPivotX(740);
         r.setPivotY(390);
-        //Rotation
+        // Rotation
         t = t.createConcatenation(r);
         this.getTransforms().clear();
         this.getTransforms().addAll(t);
@@ -40,7 +41,8 @@ public class SmartGroup extends Group{
 
     /**
      * Gestion d'une rotation autour de l'axe Y
-     * @param ang 
+     * 
+     * @param ang
      */
     void rotateByY(int ang) {
         r = new Rotate(ang, Rotate.Y_AXIS);

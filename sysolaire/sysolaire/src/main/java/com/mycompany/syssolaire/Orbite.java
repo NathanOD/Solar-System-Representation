@@ -28,17 +28,17 @@ public class Orbite {
     private double largeur;
     /**
      * Association avec une planète
-     */    
+     */
     private Astre planete;
 
-    
     /**
      * Constructeur
+     * 
      * @param pcentrex
      * @param pcentrey
      * @param longueur
      * @param largeur
-     * @param planete 
+     * @param planete
      */
     public Orbite(double pcentrex, double pcentrey, double longueur, double largeur, Astre planete) {
         this.pcentrex = pcentrex;
@@ -50,7 +50,8 @@ public class Orbite {
 
     /**
      * Getter position centre x
-     * @return 
+     * 
+     * @return
      */
     public double getPcentrex() {
         return pcentrex;
@@ -58,7 +59,8 @@ public class Orbite {
 
     /**
      * Getter position centre y
-     * @return 
+     * 
+     * @return
      */
     public double getPcentrey() {
         return pcentrey;
@@ -66,7 +68,8 @@ public class Orbite {
 
     /**
      * Getter longueur
-     * @return 
+     * 
+     * @return
      */
     public double getLongueur() {
         return longueur;
@@ -74,16 +77,17 @@ public class Orbite {
 
     /**
      * Getter largeur
-     * @return 
+     * 
+     * @return
      */
     public double getLargeur() {
         return largeur;
     }
 
-    
     /**
      * Getter planete associee
-     * @return 
+     * 
+     * @return
      */
     public Astre getPlanete() {
         return planete;
@@ -91,13 +95,11 @@ public class Orbite {
 
     /**
      * Setter planete
-     * @param planete 
+     * 
+     * @param planete
      */
     public void setPlanete(Astre planete) {
         this.planete = planete;
     }
-    
-    
-    
-    
+
 }
