@@ -9,14 +9,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import javafx.event.ActionEvent;
 
 import javafx.geometry.Point3D;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
 import javafx.scene.transform.Rotate;
@@ -47,6 +50,22 @@ public class rAstre {
      * Positionnement du label selon y
      */
     double texteY;
+    /**
+     * Checkbox associée
+     */
+    CheckBox cb;
+    /**
+     * Positionnement selon x
+     */
+    double cbx;
+    /**
+     * Positionnement selon y
+     */
+    double cby;
+    /**
+     * Ellipse associée à l'astre
+     */
+    Ellipse e;
 
     /**
      * Constructeur
@@ -55,16 +74,26 @@ public class rAstre {
      * @param l
      * @param u
      * @param texteX
-     * @param texteY 
+     * @param texteY
+     * @param cb
+     * @param cbx
+     * @param cby
+     * @param e 
      */
-    public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY) {
+    public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY, CheckBox cb, double cbx, double cby, Ellipse e) {
         this.s = s;
         this.a = a;
         this.l = l;
         this.u = u;
         this.texteX = texteX;
         this.texteY = texteY;
+        this.cb = cb;
+        this.cbx = cbx;
+        this.cby = cby;
+        this.e = e;
     }
+
+    
 
     
     /**
@@ -103,5 +132,22 @@ public class rAstre {
         s.setRadius(a.getRayon());
     }
     
+    
+    public void gestionCheckbox(){
+        cb.setLayoutX(cbx);
+        cb.setLayoutY(cby);
+        // Selectionnée
+        cb.setSelected(true);
+        cb.setOnAction((ActionEvent event) -> {
+            // Gestion affichage orbite + Planète
+            if (cb.isSelected()) {
+                e.setVisible(true);
+                s.setVisible(true);
+            } else {
+                e.setVisible(false);
+                s.setVisible(false);
+            }
+        });
+    }
     
 }

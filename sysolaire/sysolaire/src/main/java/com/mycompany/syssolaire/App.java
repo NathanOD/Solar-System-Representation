@@ -83,11 +83,13 @@ public class App extends Application {
         Label tSoleil = new Label("Soleil");
         // Creation de l'url afin d'obtenir la texture
         URL urlSoleil = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.jpg");
+        CheckBox cbSoleil = new CheckBox();
         // Creation d'une représentation
-        rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5);
+        rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5, cbSoleil, 62, 7, new Ellipse());
         // Application des méthodes pour affichage
         repSoleil.affichagePlanete();
         repSoleil.affichageTexte();
+        repSoleil.gestionCheckbox();
 
         //Gestion de l'apparence
         //Creation de la texture par image
@@ -117,11 +119,13 @@ public class App extends Application {
         Sphere rMercure = new Sphere();
         Label tMercure = new Label("Mercure");
         URL urlMercure = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mercure.jpg");
-        rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30);
+        CheckBox cbMercure = new CheckBox();
+        rAstre repMercure = new rAstre(rMercure, mercure, tMercure, urlMercure, 5, 30, cbMercure, 62, 32, eMercure);
         repMercure.affichagePlanete();
         repMercure.affichageTexte();
         repMercure.affichageTexture();
-
+        repMercure.gestionCheckbox();
+        
         // Animation
         PathTransition transitionMercure = new PathTransition();
         Animation animMercure = new Animation(transitionMercure, mercure, rMercure, eMercure);
@@ -142,10 +146,12 @@ public class App extends Application {
         Sphere rVenus = new Sphere();
         Label tVenus = new Label("Venus");
         URL urlVenus = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Venus.jpg");
-        rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55);
+        CheckBox cbVenus = new CheckBox();
+        rAstre repVenus = new rAstre(rVenus, venus, tVenus, urlVenus, 5, 55, cbVenus, 62, 57, eVenus);
         repVenus.affichagePlanete();
         repVenus.affichageTexte();
         repVenus.affichageTexture();
+        repVenus.gestionCheckbox();
 
         // Animations
         PathTransition transitionVenus = new PathTransition();
@@ -173,14 +179,18 @@ public class App extends Application {
         Label tTerre = new Label("Terre");
         // Creation de son URL afin d'obtenir la texture
         URL urlTerre = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Terre.jpg");
+        //Creation de la checkbox
+        CheckBox cbTerre = new CheckBox();
         // Creation de la représentation astrale
-        rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80);
+        rAstre repTerre = new rAstre(rTerre, terre, tTerre, urlTerre, 5, 80, cbTerre, 62, 82, eTerre);
         // Affichage de la planète
         repTerre.affichagePlanete();
         // Affichage du label associé
         repTerre.affichageTexte();
         // Association avec la texture
         repTerre.affichageTexture();
+        //Affichage des checkbox
+        repTerre.gestionCheckbox();
 
         // Animations
         // Nous avons décidé d'utiliser des animations directement implantées dans
@@ -207,10 +217,12 @@ public class App extends Application {
         Sphere rMars = new Sphere();
         Label tMars = new Label("Mars");
         URL urlMars = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Mars.jpg");
-        rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105);
+        CheckBox cbMars = new CheckBox();
+        rAstre repMars = new rAstre(rMars, mars, tMars, urlMars, 5, 105, cbMars, 62, 107, eMars);
         repMars.affichagePlanete();
         repMars.affichageTexte();
         repMars.affichageTexture();
+        repMars.gestionCheckbox();
 
         // Animations
         PathTransition transitionMars = new PathTransition();
@@ -232,10 +244,12 @@ public class App extends Application {
         Sphere rJupiter = new Sphere();
         Label tJupiter = new Label("Jupiter");
         URL urlJupiter = new URL( "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Jupiter.jpg");
-        rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130);
+        CheckBox cbJupiter = new CheckBox();
+        rAstre repJupiter = new rAstre(rJupiter, jupiter, tJupiter, urlJupiter, 5, 130, cbJupiter, 62, 132, eJupiter);
         repJupiter.affichagePlanete();
         repJupiter.affichageTexte();
         repJupiter.affichageTexture();
+        repJupiter.gestionCheckbox();
 
         // Animation Jupiter
         PathTransition transitionJupiter = new PathTransition();
@@ -257,10 +271,12 @@ public class App extends Application {
         Sphere rSaturne = new Sphere();
         Label tSaturne = new Label("Saturne");
         URL urlSaturne = new URL(  "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Saturne.jpg");
-        rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155);
+        CheckBox cbSaturne = new CheckBox();
+        rAstre repSaturne = new rAstre(rSaturne, saturne, tSaturne, urlSaturne, 5, 155, cbSaturne, 62, 157, eSaturne);
         repSaturne.affichagePlanete();
         repSaturne.affichageTexte();
         repSaturne.affichageTexture();
+        repSaturne.gestionCheckbox();
 
         // Animation Saturne
         PathTransition transitionSaturne = new PathTransition();
@@ -282,11 +298,13 @@ public class App extends Application {
         Sphere rUranus = new Sphere();
         Label tUranus = new Label("Uranus");
         URL urlUranus = new URL(   "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
-        rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180);
+        CheckBox cbUranus = new CheckBox();
+        rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180, cbUranus, 62, 182, eUranus);
         // Affichage
         repUranus.affichagePlanete();
         repUranus.affichageTexte();
         repUranus.affichageTexture();
+        repUranus.gestionCheckbox();
 
         // Animation Uranus
         PathTransition transitionUranus = new PathTransition();
@@ -308,10 +326,12 @@ public class App extends Application {
         Sphere rNeptune = new Sphere();
         Label tNeptune = new Label("Neptune");
         URL urlNeptune = new URL("https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Neptune.jpg");
-        rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205);
+        CheckBox cbNeptune = new CheckBox();
+        rAstre repNeptune = new rAstre(rNeptune, neptune, tNeptune, urlNeptune, 5, 205, cbNeptune, 62, 207, eNeptune);
         repNeptune.affichagePlanete();
         repNeptune.affichageTexte();
         repNeptune.affichageTexture();
+        repNeptune.gestionCheckbox();
 
         // Animation Neptune
         PathTransition transitionNeptune = new PathTransition();
@@ -425,150 +445,7 @@ public class App extends Application {
                 });
 
         
-        
-        // Gestion des checkbox
-        // Creation d'une checkbox
-        CheckBox cbSoleil = new CheckBox();
-        // Definition du positionnement
-        cbSoleil.setLayoutX(62);
-        cbSoleil.setLayoutY(7);
-        // Definir initialement la case comme cochée
-        cbSoleil.setSelected(true);
-        // Gestion de l'action lorsqu'elle est cochée/décochée
-        cbSoleil.setOnAction((ActionEvent event) -> {
-            // Si la checkbox est selectionnée on affiche la planete
-            if (cbSoleil.isSelected()) {
-                rSoleil.setVisible(true);
-            }
-            // Si la checkbox est déselectionnée on n'affiche plus la planete
-            else {
-                rSoleil.setVisible(false);
-            }
-        });
-
-        // Checkbox Mercure
-        CheckBox cbMercure = new CheckBox();
-        // Positionnement
-        cbMercure.setLayoutX(62);
-        cbMercure.setLayoutY(32);
-        // Selectionnée
-        cbMercure.setSelected(true);
-        cbMercure.setOnAction((ActionEvent event) -> {
-            // Gestion affichage orbite + Planète
-            if (cbMercure.isSelected()) {
-                eMercure.setVisible(true);
-                rMercure.setVisible(true);
-            } else {
-                eMercure.setVisible(false);
-                rMercure.setVisible(false);
-            }
-        });
-
-        // Checkbox Venus
-        CheckBox cbVenus = new CheckBox();
-        cbVenus.setLayoutX(62);
-        cbVenus.setLayoutY(57);
-        cbVenus.setSelected(true);
-        cbVenus.setOnAction((ActionEvent event) -> {
-            if (cbVenus.isSelected()) {
-                eVenus.setVisible(true);
-                rVenus.setVisible(true);
-            } else {
-                eVenus.setVisible(false);
-                rVenus.setVisible(false);
-            }
-        });
-
-        // Checkbox Terre
-        CheckBox cbTerre = new CheckBox();
-        cbTerre.setLayoutX(62);
-        cbTerre.setLayoutY(82);
-        cbTerre.setSelected(true);
-        cbTerre.setOnAction((ActionEvent event) -> {
-            if (cbTerre.isSelected()) {
-                eTerre.setVisible(true);
-                rTerre.setVisible(true);
-            } else {
-                eTerre.setVisible(false);
-                rTerre.setVisible(false);
-            }
-        });
-
-        // Checkbox Mars
-        CheckBox cbMars = new CheckBox();
-        cbMars.setLayoutX(62);
-        cbMars.setLayoutY(107);
-        cbMars.setSelected(true);
-        cbMars.setOnAction((ActionEvent event) -> {
-            if (cbMars.isSelected()) {
-                eMars.setVisible(true);
-                rMars.setVisible(true);
-            } else {
-                eMars.setVisible(false);
-                rMars.setVisible(false);
-            }
-        });
-
-        // Checkbox Jupiter
-        CheckBox cbJupiter = new CheckBox();
-        cbJupiter.setLayoutX(62);
-        cbJupiter.setLayoutY(132);
-        cbJupiter.setSelected(true);
-        cbJupiter.setOnAction((ActionEvent event) -> {
-            if (cbJupiter.isSelected()) {
-                eJupiter.setVisible(true);
-                rJupiter.setVisible(true);
-            } else {
-                eJupiter.setVisible(false);
-                rJupiter.setVisible(false);
-            }
-        });
-
-        // Checkbox Saturne
-        CheckBox cbSaturne = new CheckBox();
-        cbSaturne.setLayoutX(62);
-        cbSaturne.setLayoutY(157);
-        cbSaturne.setSelected(true);
-        cbSaturne.setOnAction((ActionEvent event) -> {
-            if (cbSaturne.isSelected()) {
-                eSaturne.setVisible(true);
-                rSaturne.setVisible(true);
-            } else {
-                eSaturne.setVisible(false);
-                rSaturne.setVisible(false);
-            }
-        });
-
-        // Checkbox Uranus
-        CheckBox cbUranus = new CheckBox();
-        cbUranus.setLayoutX(62);
-        cbUranus.setLayoutY(182);
-        cbUranus.setSelected(true);
-        cbUranus.setOnAction((ActionEvent event) -> {
-            if (cbUranus.isSelected()) {
-                eUranus.setVisible(true);
-                rUranus.setVisible(true);
-            } else {
-                eUranus.setVisible(false);
-                rUranus.setVisible(false);
-            }
-        });
-
-        // Checkbox Neptune
-        CheckBox cbNeptune = new CheckBox();
-        cbNeptune.setLayoutX(62);
-        cbNeptune.setLayoutY(207);
-        cbNeptune.setSelected(true);
-        cbNeptune.setOnAction((ActionEvent event) -> {
-            if (cbNeptune.isSelected()) {
-                eNeptune.setVisible(true);
-                rNeptune.setVisible(true);
-            } else {
-                eNeptune.setVisible(false);
-                rNeptune.setVisible(false);
-            }
-        });
-        
+       
         // Partie 3D ############################################################
 
         //Creation de la camera
