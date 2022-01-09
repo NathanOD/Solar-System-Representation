@@ -10,15 +10,10 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import javafx.event.ActionEvent;
-
-import javafx.geometry.Point3D;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.PhongMaterial;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
@@ -67,6 +62,7 @@ public class rAstre {
      */
     Ellipse e;
 
+    
     /**
      * Constructeur
      * @param s
@@ -92,8 +88,6 @@ public class rAstre {
         this.cby = cby;
         this.e = e;
     }
-
-    
 
     
     /**
@@ -132,14 +126,17 @@ public class rAstre {
         s.setRadius(a.getRayon());
     }
     
-    
+    /**
+     * Methode gérant la checkbox de l'astre
+     */
     public void gestionCheckbox(){
+        //Modififcation du positionnement
         cb.setLayoutX(cbx);
         cb.setLayoutY(cby);
-        // Selectionnée
+        // Initialement selectionné
         cb.setSelected(true);
         cb.setOnAction((ActionEvent event) -> {
-            // Gestion affichage orbite + Planète
+            // Gestion affichage orbite + Planèt, si selectionné affiché
             if (cb.isSelected()) {
                 e.setVisible(true);
                 s.setVisible(true);

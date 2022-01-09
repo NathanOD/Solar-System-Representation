@@ -9,30 +9,23 @@ import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.geometry.Pos;
 import javafx.scene.Camera;
 import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.PointLight;
 import javafx.scene.Scene;
-import javafx.scene.SubScene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.scene.text.Font;
 import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Transform;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -289,18 +282,17 @@ public class App extends Application {
         Astre uranus = new Astre(12, Color.rgb(140, 218, 222), 30698);
         Orbite oUranus = new Orbite(740, 390, 559, 294, uranus);
 
-        // Creation representation orbite
+        // Representation orbite
         Ellipse eUranus = new Ellipse();
         rOrbite orbUranus = new rOrbite(eUranus, oUranus);
         orbUranus.affichage();
         
-        //Representation planète
+        // Representation planète
         Sphere rUranus = new Sphere();
         Label tUranus = new Label("Uranus");
         URL urlUranus = new URL(   "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Uranus.jpg");
         CheckBox cbUranus = new CheckBox();
         rAstre repUranus = new rAstre(rUranus, uranus, tUranus, urlUranus, 5, 180, cbUranus, 62, 182, eUranus);
-        // Affichage
         repUranus.affichagePlanete();
         repUranus.affichageTexte();
         repUranus.affichageTexture();
