@@ -474,8 +474,6 @@ public class App extends Application {
                                         transitionNeptune.play();
                                 });
 
-                // Partie 3D ############################################################
-
                 // Creation de la camera
                 Camera camera = new PerspectiveCamera();
                 scene.setCamera(camera);
@@ -487,7 +485,7 @@ public class App extends Application {
                 groupePlanete.setLayoutX(-740);
                 groupePlanete.setLayoutY(-390);
 
-                // Gestion su mouvement de la caméra
+                // Gestion du mouvement de la caméra
                 stage.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
                         // Lorsque une touche est appuyée alors le groupe planète se délace selon un
                         // incrément choisi
