@@ -24,6 +24,10 @@ public class Astre {
      * Periode de revolution
      */
     private double prevolution;
+    /**
+     * Durée d'une année
+     */
+    private double pannee;
 
     /**
      * Constructeur
@@ -31,11 +35,13 @@ public class Astre {
      * @param diametre
      * @param couleur
      * @param prevolution
+     * @param pannee
      */
-    public Astre(double rayon, Color couleur, double prevolution) {
+    public Astre(double rayon, Color couleur, double prevolution, double pannee) {
         this.rayon = rayon;
         this.couleur = couleur;
         this.prevolution = prevolution;
+        this.pannee = pannee;
     }
 
     /**
@@ -65,4 +71,12 @@ public class Astre {
         return prevolution;
     }
 
+    /**
+     * Getter durée année
+     * 
+     * @return
+     */
+    public double getPannee() {
+        return this.pannee;
+    }
 }

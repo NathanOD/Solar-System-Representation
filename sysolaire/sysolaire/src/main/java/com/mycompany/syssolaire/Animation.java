@@ -2,6 +2,7 @@ package com.mycompany.syssolaire;
 
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
+import javafx.animation.RotateTransition;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.util.Duration;
@@ -11,6 +12,10 @@ public class Animation {
      * Chemin associé
      */
     PathTransition pt;
+    /**
+     * Rotation associée
+     */
+    RotateTransition rt;
     /**
      * Astre associé
      */
@@ -22,12 +27,14 @@ public class Animation {
      * Constructeur
      * 
      * @param pt
+     * @param rt
      * @param a
      * @param s
      * @param e
      */
-    public Animation(PathTransition pt, Astre a, Sphere s, Ellipse e) {
+    public Animation(PathTransition pt, RotateTransition rt, Astre a, Sphere s, Ellipse e) {
         this.pt = pt;
+        this.rt = rt;
         this.a = a;
         this.s = s;
         this.e = e;
@@ -38,7 +45,7 @@ public class Animation {
      */
     public void affAnim() {
         // Definition de la durée selon un facteur choisi
-        pt.setDuration(Duration.seconds(5.77 * Math.pow(10, -7) * a.getPrevolution() * 3600 * 24));
+        pt.setDuration(Duration.seconds(Math.pow(10, -5) * a.getPrevolution() * 3600 * 24));
         // Definition de l'élément animé
         pt.setNode(s);
         // Definition du chemin à suivre
@@ -49,5 +56,23 @@ public class Animation {
         pt.setInterpolator(Interpolator.LINEAR);
         // Lancement
         pt.play();
+    }
+
+    /**
+     * Méthode gérant l'affichage des rotations
+     */
+    public void affRotation() {
+        // Definition de la durée selon un facteur choisi
+        rt.setDuration(Duration.seconds(Math.pow(10, -5) * a.getPannee() * 3600 * 24));
+        // Definition de l'élément animé
+        rt.setNode(s);
+        // CHoix de l'amplitude de la rotation
+        rt.setByAngle(360);
+        // Animation souhaitée infinie
+        rt.setCycleCount(RotateTransition.INDEFINITE);
+        // Animation à vitesse linéaire
+        rt.setInterpolator(Interpolator.LINEAR);
+        // Lancement
+        rt.play();
     }
 }
