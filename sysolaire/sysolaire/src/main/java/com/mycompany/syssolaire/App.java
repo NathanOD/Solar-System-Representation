@@ -366,6 +366,14 @@ public class App extends Application {
                                 transitionSaturne.pause();
                                 transitionUranus.pause();
                                 transitionNeptune.pause();
+                                rotationMercure.pause();
+                                rotationVenus.pause();
+                                rotationTerre.pause();
+                                rotationMars.pause();
+                                rotationJupiter.pause();
+                                rotationSaturne.pause();
+                                rotationUranus.pause();
+                                rotationNeptune.pause();
                         }
                         // Sinon toutes les animations sont lancées
                         else {
@@ -377,6 +385,14 @@ public class App extends Application {
                                 transitionSaturne.play();
                                 transitionUranus.play();
                                 transitionNeptune.play();
+                                rotationMercure.play();
+                                rotationVenus.play();
+                                rotationTerre.play();
+                                rotationMars.play();
+                                rotationJupiter.play();
+                                rotationSaturne.play();
+                                rotationUranus.play();
+                                rotationNeptune.play();
                         }
                 });
 
@@ -462,12 +478,7 @@ public class App extends Application {
 
                 // Creation de la camera
                 Camera camera = new PerspectiveCamera();
-                // camera.relocate(790, 390);
-                // camera.setLayoutX(790);
-                // camera.setLayoutY(390);
                 scene.setCamera(camera);
-
-                // Group world = createEnvironement();
 
                 // Definition du centre de la caméra
                 groupePlanete.translateXProperty().set(1480 / 2);
