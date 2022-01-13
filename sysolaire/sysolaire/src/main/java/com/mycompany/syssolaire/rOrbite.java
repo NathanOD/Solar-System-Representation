@@ -3,6 +3,10 @@ package com.mycompany.syssolaire;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 
+/**
+ * Classe gérant les représentations orbitales
+ * @author Thoma
+ */
 public class rOrbite {
     /**
      * Ellipse représentant l'orbite
@@ -16,8 +20,8 @@ public class rOrbite {
     /**
      * Constructeur
      * 
-     * @param e
-     * @param o
+     * @param e Ellipse
+     * @param o Orbite
      */
     public rOrbite(Ellipse e, Orbite o) {
         this.e = e;

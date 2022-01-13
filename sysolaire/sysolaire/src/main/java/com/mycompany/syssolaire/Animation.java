@@ -7,6 +7,10 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Sphere;
 import javafx.util.Duration;
 
+/**
+ * Classe gérant les animations
+ * @author Thoma
+ */
 public class Animation {
     /**
      * Chemin associé
@@ -20,17 +24,23 @@ public class Animation {
      * Astre associé
      */
     Astre a;
+    /**
+     * Sphère associée
+     */
     Sphere s;
+    /**
+     * Ellipse associée
+     */
     Ellipse e;
 
     /**
      * Constructeur
      * 
-     * @param pt
-     * @param rt
-     * @param a
-     * @param s
-     * @param e
+     * @param pt Chemin ellipse
+     * @param rt Rotation
+     * @param a Astre
+     * @param s Sphere
+     * @param e Ellipse
      */
     public Animation(PathTransition pt, RotateTransition rt, Astre a, Sphere s, Ellipse e) {
         this.pt = pt;

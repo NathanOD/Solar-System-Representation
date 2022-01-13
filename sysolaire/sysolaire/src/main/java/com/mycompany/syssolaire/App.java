@@ -541,7 +541,10 @@ public class App extends Application {
                 stage.show();
 
         }
-
+        /**
+         * Lancement
+         * @param args 
+         */
         public static void main(String[] args) {
                 launch();
         }

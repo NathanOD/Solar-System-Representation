@@ -1,0 +1,52 @@
+@options
+@packages
+@argfile
+--class-path
+'C:/Users/Thoma/.m2/repository/org/openjfx/javafx-controls/13/javafx-controls-13.jar;C:/Users/Thoma/.m2/repository/org/openjfx/javafx-graphics/13/javafx-graphics-13.jar;C:/Users/Thoma/.m2/repository/org/openjfx/javafx-base/13/javafx-base-13.jar'
+--module-path
+'C:/Users/Thoma/.m2/repository/org/openjfx/javafx-base/13/javafx-base-13-win.jar;C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/target/classes;C:/Users/Thoma/.m2/repository/org/openjfx/javafx-graphics/13/javafx-graphics-13-win.jar;C:/Users/Thoma/.m2/repository/org/openjfx/javafx-controls/13/javafx-controls-13-win.jar'
+--patch-module
+com.mycompany.syssolaire='C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/src/main/java'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+--module-source-path
+'C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/target/site/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'syssolaire 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'syssolaire 1.0-SNAPSHOT API'
+com.mycompany.syssolaire
+'C:/Users/Thoma/OneDrive/Documents/GitHub/SystemeSolaire/sysolaire/sysolaire/src/main/java/module-info.java'
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\allclasses-index.html = 1642067561598
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\allpackages-index.html = 1642067561601
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\element-list = 1642067561467
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\help-doc.html = 1642067561634
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\index-all.html = 1642067561626
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\index.html = 1642067561629
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\javadoc.bat = 1642067405949
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\jquery-ui.overrides.css = 1642067561676
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\member-search-index.js = 1642067561608
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\module-search-index.js = 1642067561603
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\overview-tree.html = 1642067561572
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\package-search-index.js = 1642067561605
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\script.js = 1642067561643
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\search.js = 1642067561648
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\stylesheet.css = 1642067561640
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\tag-search-index.js = 1642067561610
+C:\Users\Thoma\OneDrive\Documents\GitHub\SystemeSolaire\sysolaire\sysolaire\target\site\apidocs\type-search-index.js = 1642067561606

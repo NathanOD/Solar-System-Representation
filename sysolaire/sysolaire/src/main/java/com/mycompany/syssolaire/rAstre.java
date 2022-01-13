@@ -20,7 +20,7 @@ import javafx.scene.text.Font;
 import javafx.scene.transform.Rotate;
 
 /**
- *
+ * Classe gérant la représentation des astres
  * @author Thoma
  */
 public class rAstre {
@@ -65,16 +65,16 @@ public class rAstre {
     /**
      * Constructeur
      * 
-     * @param s
-     * @param a
-     * @param l
-     * @param u
-     * @param texteX
-     * @param texteY
-     * @param cb
-     * @param cbx
-     * @param cby
-     * @param e
+     * @param s Sphère
+     * @param a Astre
+     * @param l Longueur
+     * @param u URL
+     * @param texteX Position X
+     * @param texteY Position Y
+     * @param cb Checkbox
+     * @param cbx Position checkbox X
+     * @param cby Position checkbox Y
+     * @param e Ellipse
      */
     public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY, CheckBox cb, double cbx, double cby,
             Ellipse e) {
@@ -105,7 +105,7 @@ public class rAstre {
     /**
      * Methode permettant d'afficher la texture des planètes
      * 
-     * @throws IOException
+     * @throws IOException Exception
      */
     public void affichageTexture() throws IOException {
         // Recuperation de l'image à partir d'internet

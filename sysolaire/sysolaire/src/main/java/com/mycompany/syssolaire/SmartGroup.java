@@ -10,7 +10,7 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
 
 /**
- *
+ * Classe gérant la caméra
  * @author Thoma
  */
 public class SmartGroup extends Group {
@@ -26,7 +26,7 @@ public class SmartGroup extends Group {
     /**
      * Gestion d'une rotation autour de l'axe X
      * 
-     * @param ang
+     * @param ang Angle
      */
     void rotateByX(int ang) {
         r = new Rotate(ang, Rotate.X_AXIS);
@@ -42,7 +42,7 @@ public class SmartGroup extends Group {
     /**
      * Gestion d'une rotation autour de l'axe Y
      * 
-     * @param ang
+     * @param ang Angle
      */
     void rotateByY(int ang) {
         r = new Rotate(ang, Rotate.Y_AXIS);
