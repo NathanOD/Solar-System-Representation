@@ -38,7 +38,7 @@ public class Orbite {
      * @param pcentrey Position centre Y
      * @param longueur Longueur
      * @param largeur Largeur
-     * @param planete Planète
+     * @param planete Planète associée
      */
     public Orbite(double pcentrex, double pcentrey, double longueur, double largeur, Astre planete) {
         this.pcentrex = pcentrex;

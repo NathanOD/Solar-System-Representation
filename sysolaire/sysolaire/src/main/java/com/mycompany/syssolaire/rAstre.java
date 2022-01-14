@@ -69,11 +69,11 @@ public class rAstre {
      * @param a Astre
      * @param l Longueur
      * @param u URL
-     * @param texteX Position X
-     * @param texteY Position Y
+     * @param texteX Position du texte en X
+     * @param texteY Position du texte en Y
      * @param cb Checkbox
-     * @param cbx Position checkbox X
-     * @param cby Position checkbox Y
+     * @param cbx Position checkbox en X
+     * @param cby Position checkbox en Y
      * @param e Ellipse
      */
     public rAstre(Sphere s, Astre a, Label l, URL u, double texteX, double texteY, CheckBox cb, double cbx, double cby,

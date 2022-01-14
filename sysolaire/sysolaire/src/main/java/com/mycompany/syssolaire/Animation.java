@@ -36,8 +36,8 @@ public class Animation {
     /**
      * Constructeur
      * 
-     * @param pt Chemin ellipse
-     * @param rt Rotation
+     * @param pt Chemin désigné par l'ellipse
+     * @param rt Rotation sur elle même
      * @param a Astre
      * @param s Sphere
      * @param e Ellipse

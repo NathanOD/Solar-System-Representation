@@ -77,6 +77,7 @@ public class App extends Application {
                 // Creation de l'url afin d'obtenir la texture
                 URL urlSoleil = new URL(
                                 "https://raw.githubusercontent.com/NathanOD/SystemeSolaire/main/sysolaire/sysolaire/Soleil.jpg");
+                // Creation de sa checkbox
                 CheckBox cbSoleil = new CheckBox();
                 // Creation d'une représentation
                 rAstre repSoleil = new rAstre(rSoleil, soleil, tSoleil, urlSoleil, 5, 5, cbSoleil, 62, 7,
@@ -398,7 +399,7 @@ public class App extends Application {
 
                 // Creation Slider Vitesse
                 Slider sliderVitesse = new Slider();
-                // Definition min et max (de x1 à x5)
+                // Definition min et max (de x1 à x10)
                 sliderVitesse.setMin(1);
                 sliderVitesse.setMax(10);
                 // Valeur au lancement 1

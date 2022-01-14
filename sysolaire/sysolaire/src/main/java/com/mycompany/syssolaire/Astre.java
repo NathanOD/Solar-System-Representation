@@ -32,10 +32,10 @@ public class Astre {
     /**
      * Constructeur
      * 
-     * @param rayon Rayon
-     * @param couleur Couleur
-     * @param prevolution Periode révolution
-     * @param pannee Periode année
+     * @param rayon Rayon de l'astre
+     * @param couleur Couleur associée
+     * @param prevolution Periode pour une révolution
+     * @param pannee Periode pour une année
      */
     public Astre(double rayon, Color couleur, double prevolution, double pannee) {
         this.rayon = rayon;
@@ -45,9 +45,9 @@ public class Astre {
     }
 
     /**
-     * Getter diametre
+     * Getter rayon
      * 
-     * @return Diametre
+     * @return Rayon de l'astre
      */
     public double getRayon() {
         return rayon;
@@ -56,7 +56,7 @@ public class Astre {
     /**
      * Getter couleur
      * 
-     * @return Couleur 
+     * @return Couleur de l'astre
      */
     public Color getCouleur() {
         return couleur;
@@ -65,7 +65,7 @@ public class Astre {
     /**
      * Getter periode revolution
      * 
-     * @return Periode révolution
+     * @return Periode de révolution
      */
     public double getPrevolution() {
         return prevolution;
@@ -74,7 +74,7 @@ public class Astre {
     /**
      * Getter durée année
      * 
-     * @return Periode Année
+     * @return Periode pour une année
      */
     public double getPannee() {
         return this.pannee;
