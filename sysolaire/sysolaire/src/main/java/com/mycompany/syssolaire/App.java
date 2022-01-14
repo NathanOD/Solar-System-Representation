@@ -437,6 +437,14 @@ public class App extends Application {
                                         transitionSaturne.stop();
                                         transitionUranus.stop();
                                         transitionNeptune.stop();
+                                        rotationMercure.stop();
+                                        rotationVenus.stop();
+                                        rotationTerre.stop();
+                                        rotationMars.stop();
+                                        rotationJupiter.stop();
+                                        rotationSaturne.stop();
+                                        rotationUranus.stop();
+                                        rotationNeptune.stop();
                                         // Nouvelle durée de l'animation en divisant par la valeur récupérée
                                         // On récupère cette nouvelle valeur avec newVal qui est un number
                                         // Nous convertissons donc cette valeur en double
@@ -464,6 +472,14 @@ public class App extends Application {
                                         transitionNeptune.setDuration(Duration.seconds(
                                                         Math.pow(10, -5) * neptune.getPrevolution() * 3600 * 24
                                                                         / newVal.doubleValue()));
+                                        rotationMercure.setDuration(Duration.seconds(Math.pow(10, -5) * mercure.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationVenus.setDuration(Duration.seconds(Math.pow(10, -5) * venus.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationTerre.setDuration(Duration.seconds(Math.pow(10, -5) * terre.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationMars.setDuration(Duration.seconds(Math.pow(10, -5) * mars.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationJupiter.setDuration(Duration.seconds(Math.pow(10, -5) * jupiter.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationSaturne.setDuration(Duration.seconds(Math.pow(10, -5) * saturne.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationUranus.setDuration(Duration.seconds(Math.pow(10, -5) * uranus.getPannee() * 3600 * 24 / newVal.doubleValue()));
+                                        rotationNeptune.setDuration(Duration.seconds(Math.pow(10, -5) * neptune.getPannee() * 3600 * 24 / newVal.doubleValue()));
                                         // On relance l'ensemble des animations
                                         transitionMercure.play();
                                         transitionVenus.play();
@@ -473,6 +489,14 @@ public class App extends Application {
                                         transitionSaturne.play();
                                         transitionUranus.play();
                                         transitionNeptune.play();
+                                        rotationMercure.play();
+                                        rotationVenus.play();
+                                        rotationTerre.play();
+                                        rotationMars.play();
+                                        rotationJupiter.play();
+                                        rotationSaturne.play();
+                                        rotationUranus.play();
+                                        rotationNeptune.play();
                                 });
 
                 // Creation de la camera
@@ -532,12 +556,10 @@ public class App extends Application {
                                 cbUranus,
                                 cbNeptune);
                 ginteraction.getChildren().addAll(tSlider, sliderVitesse, BoutonPause);
-
                 // Association des groupes à la racine afin qu'ils soient affichés
-                root.getChildren().add(ginteraction);
                 root.getChildren().add(groupePlanete);
                 root.getChildren().add(glegende);
-
+                root.getChildren().add(ginteraction);
                 // Affichage
                 stage.show();
 

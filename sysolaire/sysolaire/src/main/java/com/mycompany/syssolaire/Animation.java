@@ -69,7 +69,7 @@ public class Animation {
     }
 
     /**
-     * Méthode gérant l'affichage des rotations
+     * Méthode gérant l'affichage des rotations sur elles memes
      */
     public void affRotation() {
         // Definition de la durée selon un facteur choisi
